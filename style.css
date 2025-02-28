@@ -1,1 +1,11 @@
-/* NO CLASSES!~!!!!! */
+body{
+    background-color: lightsteelblue;
+}
+
+embed{
+    display: none;
+}
+
+button:active + embed{
+    display: block;
+}
