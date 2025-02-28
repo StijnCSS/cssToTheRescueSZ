@@ -1,12 +1,22 @@
+:root{
+--MPK-black-01: #2B2628;
+--MPK-black-02:#4F4D4E;
+--MPK-red: #D31426;
+--MPK-white-01: #FDFDFF;
+}
 body{
     background-color: lightsteelblue;
+    width: 100vw;
 }
 
-embed{
-    display: none;
+/* top section */
+section{
+    width: 80px;
+    background-color: grey;
+}
+section div {
+    width: 100%;
+    background: pink;
 }
 
-button:active + embed{
-    display: block;
-    
-}
+/* bottom section */

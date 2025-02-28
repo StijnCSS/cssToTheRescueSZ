@@ -21,4 +21,7 @@ De midi player krijgt een skin die je met knoppen aan kan passen. Denk aan kleur
 ### Typografie
 Ik ga het logo op de midi player van AKAI maken en als het een variabele font is animeren. Ik wil boven de midiplayer ook nog wat met tekst gaan doen omdat ik tekst animaties heel tof vind.!
 
-### Joe
+### Realisme
+Ik wil het er zo realistisch mogelijk uit laten zien door gradients etc te gebruiken.
+
+### Joe Joe
