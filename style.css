@@ -6,6 +6,6 @@ embed{
     display: none;
 }
 
-button:active + embed{
+button:hover + embed{
     display: block;
 }
