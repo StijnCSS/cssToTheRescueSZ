@@ -19,7 +19,7 @@ section {
     max-width: 1080px;
     aspect-ratio: 1.75/1;
     background: var(--MPK-black-01);
-    border-inline: #C61325 10px solid;
+    border-inline: #c61325 10px solid;
 }
 
 /*             boven & onderkant             */
@@ -120,7 +120,7 @@ section div:nth-child(1) div:nth-child(3) div:nth-child(2) {
 /*                onderkant                   */
 /*                onderkant                   */
 
-section div:nth-child(2) {
+section div:first-of-type section div:nth-child(1) {
     color: green;
 }
 
@@ -132,7 +132,7 @@ section div:nth-child(2) div:nth-child(even), section div:nth-child(2) div:nth-c
 section div:nth-child(2) div:nth-child(even) {
     width: 90%;
     background: var(--MPK-white);
-    box-shadow: inset 0px 12px 10px 0px rgba(0,0,0,0.6);
+    /* box-shadow: inset 0px 12px 10px 0px rgba(0,0,0,0.6); */
 }
 
 section div:nth-child(2) div:nth-child(odd) {
