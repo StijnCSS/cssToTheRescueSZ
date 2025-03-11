@@ -1,0 +1,257 @@
+@font-face {
+    font-family: 'EurostileExtended';
+    src: url('/assets/EurostileExtendedBlack.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Orbitron';
+    src: url('/assets/Orbitron-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900; 
+    font-style: normal;
+}
+
+html {
+    --background:white;
+    --piano-body: linear-gradient(45deg, red, green);
+    --piano-joystick: red;
+    --border-radius: 2vw;
+    --button-color:#fff;
+    --button-color-hover:red;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+body {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    place-content: center;
+    /* verschil place content & items */
+    background-color: var(--background);
+    border-radius: var(--border-radius);
+}
+h1, h2, h3, h4 {
+    color:white;
+}
+h1, h4{
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+}
+
+/* AKAI */
+h1{
+    font-size:3cqw;
+}
+
+/* MPK */
+h2 {
+    font-size: 4cqw;
+    color: black;
+    text-shadow: 1px 1px 0px white;
+    background-clip: text;
+
+}
+
+/* MINI */
+h3 {
+    font-size: 3cqw;
+    font-weight: 400;
+}
+
+/* professional */
+h4 {
+    font-size: 0.9cqw;
+}
+
+a {
+    font-size: 1em;
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    display: grid;
+    list-style:none;
+    width:90vw;
+    height: calc(90vw * 9 / 16);
+    border-radius: 2vw;
+    overflow: hidden;
+    background:black;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    grid-template-areas:
+      "j j d d d d d a a a c c c c c c"
+      "j j d d d d d a a a c c c c c c"
+      "b b d d d d d k k k k k k k k k"
+      "b b d d d d d k k k k k k k k k"
+      "t t t t t t t k k k k k k k k k"
+      "l p p p p p p p p p p p p p p r"
+      "l p p p p p p p p p p p p p p r"
+      "l p p p p p p p p p p p p p p r"
+      "l p p p p p p p p p p p p p p r";
+    /* ChatGPT: Added to ensure consistent scaling */
+    /* min-height: 0; */
+  }
+
+    /* ChatGPT: Set min-height: 0 on all grid items to prevent content from forcing minimum sizes */
+/* section > div {
+    min-height: 0;
+    overflow: hidden;
+    /*ChatGPT: Prevent content overflow }*/
+ 
+
+
+/* joystick */
+section div:first-child{
+    grid-area:j;
+  }
+  
+section div:first-child ul {
+    height:100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    list-style:none;
+    background: radial-gradient( #b2b2b2 35%, var(--piano-body) 16%);
+  }
+    
+  section div:first-child ul li:nth-child(5) {
+    pointer-events:none;
+   background: radial-gradient(circle,
+     rgba(209,19,37,1) 35%,
+     rgba(145,11,24,1) 40%,
+     rgba(145,11,24,1) 50%,
+     rgba(209,19,37,1) 60%);
+    border: rgba(145,11,24,1) solid 3px;
+    filter: drop-shadow(0 0 1em #000);
+    border-radius:50%;
+    transform:scale(1.2);
+    transition: transform 0.3s ease-in-out;
+ }
+ 
+ section div:first-child ul:has(li:nth-child(1):hover) li:nth-child(5) {
+    transform: translate(-70%, -70%) scale(1.1);
+  }
+  section div:first-child ul:has(li:nth-child(2):hover) li:nth-child(5) {
+    transform: translateY(-70%) scale(1.1); 
+  }
+  section div:first-child ul:has(li:nth-child(3):hover) li:nth-child(5) {
+    transform: translate(70%, -70%) scale(1.1); 
+  }
+  section div:first-child ul:has(li:nth-child(4):hover) li:nth-child(5) {
+    transform: translateX(-70%) scale(1.2);
+  }
+  section div:first-child ul:has(li:nth-child(6):hover) li:nth-child(5) {
+    transform: translateX(70%) scale(1.2);
+  }
+  section div:first-child ul:has(li:nth-child(7):hover) li:nth-child(5) {
+    transform: translate(-70%, 70%) scale(1.3);
+  }
+  section div:first-child ul:has(li:nth-child(8):hover) li:nth-child(5) {
+    transform: translateY(70%) scale(1.3);
+  }
+  section div:first-child ul:has(li:nth-child(9):hover) li:nth-child(5) {
+    transform: translate(70%, 70%) scale(1.3);
+  }
+  
+/* buttons linksboven */
+section div:nth-child(2) {
+    background:orange;
+    grid-area:b;
+}
+
+section div:nth-child(2) ul{
+    display: flex;
+    flex-wrap: wrap;}
+
+section div:nth-child(2) a {
+    background-color: #2a2a2a;
+    Border: 2px solid black;
+    font-size: .8em;
+}
+
+/* drumpads */
+section div:nth-child(3){
+    background:yellow;
+    grid-area:d;
+}
+/* tekst */
+section div:nth-child(4){
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    gap: 1em;
+    grid-area:t;
+    padding-left: 0.5em;
+}
+
+section div:nth-child(4) div{
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+/* animation screen */
+section div:nth-child(5){
+    background:limegreen;
+    grid-area:a;
+}
+/* buttons */
+section div:nth-child(6){
+    background:rebeccapurple;
+    grid-area:c;
+}
+/* knobs */
+section div:nth-child(7){
+    background:seagreen;
+    grid-area:k;
+}
+/* bottomleft */
+section div:nth-child(8){
+    background:sandybrown;
+    grid-area:l;
+}
+/* piano keys */
+section div:nth-child(9){
+    background:lightblue;
+    grid-area:p;
+}
+/* bottom right */
+section div:last-child{
+    background:teal;
+    grid-area:r;
+}
+
+
+/* 
+ @media (max-width: 420px) {
+    section{
+        width: 70vh;
+        transform: rotate(90deg);
+        transition: 300ms linear;
+    }
+} 
+ @media (min-width: 1000px) {
+    section{
+        height: calc(90vw * 9 / 32);
+        transition: 300ms linear;
+        grid-template-columns: repeat(32, 1fr);
+        grid-template-rows: repeat(9, auto);
+        grid-template-areas:
+        "j j j d d d d d d d d d d d d d d d a a a a c c c c c c c c c c"
+        "j j j d d d d d d d d d d d d d d d a a a a c c c c c c c c c c"
+        "j j j d d d d d d d d d d d d d d d k k k k k k k k k k k k k k"
+        "b b b d d d d d d d d d d d d d d d k k k k k k k k k k k k k k"
+        "t t t t t t t t t t t t t t t t t t k k k k k k k k k k k k k k"
+        "l p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p r"
+        "l p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p r"
+        "l p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p r"
+        "l p p p p p p p p p p p p p p p p p p p p p p p p p p p p p p r";
+    }
+}  */
+  
