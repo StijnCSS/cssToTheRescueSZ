@@ -12,11 +12,15 @@ html {
 --piano-keys: 2.5rem;
 --piano-width: calc( (var(--piano-keys) + var(--border-width-2))*  7);
 
+--joystick-color: var(--color-note-c);
+
 --drumpad-keys: 4rem;
 --drumpad-width: calc( var(--drumpad-width) + 1rem );
+--drumpad-color:#ff9900;
 
 --border-width: 1px;
 --border-width-2: calc( var(--border-width) * 2 );
+
 
 --height-top:4rem;
 --height-bottom:8rem;
@@ -27,14 +31,17 @@ html {
 --keys-black-width:calc( var(--piano-width) * 0.5 );
 --keys-radius:.3rem;
 --keys-radius-edge:0.3rem;
-
---background:#0099ff;
---controller-background:#222222;
---controller-knobs:#ff9900;
---controller-buttons:#ff0099;
+--keys-black-height:50%;
 
 --keys-white-color:#fff;
 --keys-black-color:var(--controller-background);
+
+--background:#0099ff;
+--controller-background:#222;
+
+--controller-buttons:#ff0099;
+
+
 
 --color-note-c: #FF4D4D;      /* Vibrant Red */
 --color-note-c-sharp: #FF914D; /* Vibrant Orange */
@@ -52,12 +59,19 @@ html {
 --color-display:#606c38;
 --color-display-highlight: #283618;
 --color-display-border:#000000;
-
-
 }
+
+html:has(#white:checked) {
+    --controller-background:#fff;
+    --keys-white-color:#222;
+    /* --keys-radius: 0;
+    --height-bottom:16rem;
+    --keys-height:100%; */
+}
+
 * {
-padding: 0;
-margin: 0;
+    padding: 0;
+    margin: 0;
 }
 
 ul{
@@ -67,7 +81,7 @@ ul{
 body{
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 02rem;
     align-items: center;
     justify-content: center;
     height: 100vh;
@@ -81,7 +95,6 @@ section:nth-of-type(1) {
     border-radius: 1em;
     border-start-start-radius: 3em;
 }
-
 
 /* bovenkant */ /* bovenkant */ /* bovenkant */
 
@@ -99,9 +112,6 @@ input[type=range]{
 input[type=range]::-webkit-slider-runnable-track {
     background: white;
 }
-
-
-
 
 input[type=range]::-ms-thumb {
     box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
@@ -121,6 +131,7 @@ input[type=range]::-ms-thumb {
     gap: 1rem;
     height: var(--height-top);
     padding-bottom: 1rem;
+    flex-grow: 1;
     /* width: fit-content; */
 }
 
@@ -218,7 +229,6 @@ section:nth-of-type(1) > div:first-of-type ul:first-of-type:has(li:nth-child(1):
 /* drumpad */ /* drumpad */ /* drumpad */
 
 section:nth-of-type(1)  ul:nth-of-type(2) {
-    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: row;
@@ -236,19 +246,45 @@ section:nth-of-type(1)  ul:nth-of-type(2) li{
     background-color:red;}
 }
 
+section:nth-of-type(1)  ul:nth-of-type(2) li input[type="radio"] {
+    appearance: none;
+    position: absolute;
+    opacity: 0; 
+}
+
+section:nth-of-type(1)  ul:nth-of-type(2) li label {
+    width: 4rem;
+    height: 4rem;
+    background-color:teal;
+    border-radius: 8px;
+    display: inline-block; /* Allows block-like styling */
+    cursor: pointer;
+    
+    &:hover{
+        background-color: #32CD32;
+    }
+}
+
+section:nth-of-type(1)  ul:nth-of-type(2) li input[type="radio"]:checked + label {
+    background-color: blue; 
+}
+
+
+/* default state 2 drumpads zichtbaar */
 
 section:nth-of-type(1)  ul:nth-of-type(2) li:nth-of-type(1),
 section:nth-of-type(1)  ul:nth-of-type(2) li:nth-of-type(2) {
     display: block;
 }
 
+
 /* scherm */ /* scherm */ /* scherm */ /* scherm */
 
 section:nth-of-type(1) > div:first-of-type > div {
 background: red;
 height: 100%;
-width:30%;
-flex-grow:1;
+width: 10%;
+flex-grow: 2;
 border-radius: var(--keys-radius);
 }
 
@@ -323,7 +359,7 @@ section:nth-of-type(1) > div:last-of-type ul li:nth-child(12n + 11) {
     margin-left: calc(var(--piano-keys) * -0.5);
     transform: translateX( calc(var(--piano-keys) * 0.25) );
     background: var(--keys-black-color);
-    height: 50%;
+    height: var(--keys-black-height);
     outline:2px solid var(--keys-black-color);
     border-top-left-radius: 0;
     border-top-right-radius: 0;
