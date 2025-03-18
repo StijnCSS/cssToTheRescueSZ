@@ -439,31 +439,19 @@ section:nth-of-type(2) div {
         content: 'uit';
         font-size: 30cqw; /* Works in supporting browsers */
         font-family: 'Tiny5';
-<<<<<<< Updated upstream
         font-variation-settings: 'wght' 50;
         animation: weight-animation 5s linear infinite alternate;
-=======
-        font-variation-settings: 'wght' var(--gradient-percent);
-        
->>>>>>> Stashed changes
     }
 }
 
 @keyframes weight-animation {
     from {
         font-variation-settings: 'wght' 50;
-<<<<<<< Updated upstream
         transform: scale(1);
     }
     to {
         font-variation-settings: 'wght' 300;
         transform: scale(10);
-=======
-    }
-    to {
-        font-variation-settings: 'wght' 150;
-
->>>>>>> Stashed changes
     }
 } 
 
