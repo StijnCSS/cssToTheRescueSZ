@@ -5,43 +5,53 @@
 }
 
 html {
+--background-color:hsl(204, var(--gradient-percent), 50%);
+
 --controller-width: round(down, 90vw, calc( (var(--piano-width) ) ) );
 --controller-height: 12em;
+--controller-height-top:4rem;
+--controller-height-bottom:8rem;
 --controller-border-radius: 0.5rem;
-    
+--controller-padding:1rem;
+--controller-gap:1rem;
+--controller-color:#222222;
+--gradient-percent: 50%;
+
 --piano-keys: 2.5rem;
 --piano-width: calc( (var(--piano-keys) + var(--border-width-2))*  7);
+--piano-radius: 3em 1em 1em 1em;
 
 --joystick-color: var(--color-note-c);
+--joystick-radius: 25%;
+--joystick-width: 4rem;
+--joystick-height: var(--joystick-width);
 
 --drumpad-keys: 4rem;
 --drumpad-width: calc( var(--drumpad-width) + 1rem );
---drumpad-color:#ff9900;
+--drumpad-radius:1rem;
+--drumpad-color:#ffffff;
+
+--display-color:#606c38;
+--display-color-highlight: #283618;
+--display-color-border:#1b2410;
 
 --border-width: 1px;
 --border-width-2: calc( var(--border-width) * 2 );
 
-
---height-top:4rem;
---height-bottom:8rem;
+--keys-radius:.3rem;
+--keys-radius-edge:0.3rem;
 
 --keys-white-hover:#d3d3d3;
 --keys-white-width: var(--piano-keys);
+--keys-white-height: 100%;
+--keys-white-border: solid var(--controller-color) 1px;
 
 --keys-black-width:calc( var(--piano-width) * 0.5 );
---keys-radius:.3rem;
---keys-radius-edge:0.3rem;
+
 --keys-black-height:50%;
 
 --keys-white-color:#fff;
---keys-black-color:var(--controller-background);
-
---background:#0099ff;
---controller-background:#222;
-
---controller-buttons:#ff0099;
-
-
+--keys-black-color:var(--controller-color);
 
 --color-note-c: #FF4D4D;      /* Vibrant Red */
 --color-note-c-sharp: #FF914D; /* Vibrant Orange */
@@ -55,18 +65,61 @@ html {
 --color-note-a: #8A2BE2;      /* Vibrant Indigo */
 --color-note-a-sharp: #D02090; /* Vibrant Violet */
 --color-note-b: #FF1493;      /* Vibrant Pink */
-
---color-display:#606c38;
---color-display-highlight: #283618;
---color-display-border:#000000;
 }
 
+
 html:has(#white:checked) {
-    --controller-background:#fff;
+    --controller-color:#cecece;
     --keys-white-color:#222;
-    /* --keys-radius: 0;
-    --height-bottom:16rem;
-    --keys-height:100%; */
+}
+
+html:has(#tom:checked) {
+    --controller-color:#F97502;
+    --keys-white-color:#043E68;
+    --color-note-c: #FF7A00;      /* Warm Orange */
+    --color-note-c-sharp: #C4400B; /* Deep Reddish-Orange */
+    --color-note-d: #00345B;      /* Dark Navy Blue */
+    --color-note-d-sharp: #006188; /* Deep Cyan Blue */
+    --color-note-e: #009AC1;      /* Vibrant Sky Blue */
+    --color-note-f: #58C8E6;      /* Light Cyan Blue */
+    --color-note-f-sharp: #FF7A00; /* Repeated Warm Orange for consistency */
+    --color-note-g: #C4400B;      /* Repeated Deep Reddish-Orange for contrast */
+    --color-note-g-sharp: #00345B; /* Repeated Dark Navy Blue for balance */
+    --color-note-a: #006188;      /* Repeated Deep Cyan Blue */
+    --color-note-a-sharp: #009AC1; /* Repeated Vibrant Sky Blue */
+    --color-note-b: #58C8E6;      /* Repeated Light Cyan Blue */
+}
+html:has(#kim:checked) {
+    --controller-color:#6BAA32;
+    --keys-white-color:#60D1F8;
+    --keys-black-color:#FFB5D7;
+    --color-note-c: #6BAA32;      /* Bright Grass Green */
+    --color-note-c-sharp: #477519; /* Dark Leaf Green */
+    --color-note-d: #F4CC4E;      /* Soft Yellow Flower */
+    --color-note-d-sharp: #D2892D; /* Warm Orange-Brown (Tree Trunk) */
+    --color-note-e: #8E5B37;      /* Earthy Brown (Tree Base) */
+    --color-note-f: #99C6F2;      /* Light Sky Blue */
+    --color-note-f-sharp: #4F8DC5; /* Deep Sky Blue */
+    --color-note-g: #EB8E48;      /* Warm Peach (Castle Roof) */
+    --color-note-g-sharp: #8A5FA8; /* Soft Purple (Flowers) */
+    --color-note-a: #D685B7;      /* Light Pink (Flowers) */
+    --color-note-a-sharp: #F6E7B6; /* Pale Cream (Castle Details) */
+    --color-note-b: #567230;      /* Shadowed Green (Bush Highlights) */
+}
+
+html:has(#abby:checked) {
+    --color-note-c: #D09099;      /* Soft Dusty Rose (Background) */
+    --color-note-c-sharp: #1C1C1C; /* Deep Charcoal Black (Text) */
+    --color-note-d: #8A6F74;      /* Muted Mauve (Subtle Shadows) */
+    --color-note-d-sharp: #B8878F; /* Warm Blush Pink (Highlights) */
+    --color-note-e: #3A2D32;      /* Dark Plum (Logo Accent) */
+    --color-note-f: #E3C6CC;      /* Pale Rose (Soft Light Areas) */
+    --color-note-f-sharp: #654A4F; /* Warm Brownish Gray (Details) */
+    --color-note-g: #F4E9EB;      /* Soft Creamy Pink (Lightest Tone) */
+    --color-note-g-sharp: #5E454A; /* Muted Wine (Subtle Accents) */
+    --color-note-a: #AA8D93;      /* Soft Taupe (Neutral Balance) */
+    --color-note-a-sharp: #2E1F23; /* Rich Brown (Deepest Shadows) */
+    --color-note-b: #CBA4AA;      /* Warm Pastel Pink (Secondary Accent) */
 }
 
 * {
@@ -80,115 +133,134 @@ ul{
 
 body{
     display: flex;
-    flex-direction: column;
-    gap: 02rem;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background:var(--background);
+    background-color:var(--background-color);
+    overflow: hidden;
+    
 }
 
-section:nth-of-type(1) {
-    background: var(--controller-background);
-    width: fit-content;
-    padding: 1em;
-    border-radius: 1em;
-    border-start-start-radius: 3em;
-}
 
 /* bovenkant */ /* bovenkant */ /* bovenkant */
 
+section:nth-of-type(1) {
+    background-color: var(--controller-color);
+    width: fit-content;
+    padding: var(--controller-padding);
+    border-radius:var(--piano-radius);
+}
+
 
 /* kabel */ /* kabel */ /* kabel */ /* kabel */
-
+/* opzoeken wat webkit precies doet */
 input[type=range]{
+    appearance: none;
+    background: transparent;
     position: absolute;
     top:0;
     right:30%;
-    height: 38.7%;
+    height: calc(50vh - 7.5rem);
+    width: 1rem;
     writing-mode: vertical-lr;
+    /* z-index: -1; */
 }
 
 input[type=range]::-webkit-slider-runnable-track {
-    background: white;
+    width: 1rem;
+    /* background: transparent; */
+    background: linear-gradient(var(--color-note-a) var(--gradient-percent), rgba(255,46,46,0) var(--gradient-percent));
 }
 
-input[type=range]::-ms-thumb {
-    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-    border: 1px solid #000000;
-    height: 36px;
-    width: 16px;
-    border-radius: 3px;
-    background: #ffffff;
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 3rem;
+    width: 2rem;
+    border-top-right-radius: .5rem;
+    border-top-left-radius: .5rem;
+    background: var(--color-note-a);
+    box-shadow: 0 10px 0 gray;
     cursor: pointer;
+    transform: translateX(-.5rem);
+    /* margin-top: -14px; You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+}
+
+input[type=range]::-ms-track {
+    width: 5rem;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    border-width: 16px 0;
+    color: transparent;
   }
+
   
   
 /* joystick */ /* joystick */ /* joystick */
 
   section:nth-of-type(1) > div:first-of-type{
     display: flex;
-    gap: 1rem;
-    height: var(--height-top);
-    padding-bottom: 1rem;
-    flex-grow: 1;
-    /* width: fit-content; */
+    gap: var(--controller-gap);
+    height: var(--controller-height-top);
+    padding-bottom: var(--controller-padding);
 }
 
 
 section:nth-of-type(1) > div:first-of-type ul:nth-of-type(1){
-    flex-shrink:0;
     display: grid;
     grid-template-columns: repeat(3, 33%);
     grid-template-rows: repeat(3, 33%);
-    height: 4rem;
-    width: 4rem;
+    
+    height: var(--joystick-height);
+    width: var(--joystick-width);
+    
     background-color: var(--keys-white-color);
-    border-radius: 50%;
+    border-radius: var(--joystick-radius);
+    flex-shrink:0;
     
 }
 
 section:nth-of-type(1) > div:first-of-type ul:nth-of-type(1) li:nth-child(5) {
     pointer-events:none;
-    background: var(--color-note-c);
-    border-radius:50%;
+    background-color: var(--joystick-color);
+    border-radius:var(--joystick-radius);
     transform:scale(1.2);
     transition: 0.3s ease-in-out;
 }
 
 body:has(section:nth-of-type(1) > div:first-of-type ul:nth-of-type(1) li:nth-child(1):hover) {
-    background: var(--color-note-a);
-    transition: background 0.3s ease-in-out; 
+    background-color: var(--color-note-a);
+    transition: background-color 0.3s ease-in-out; 
 }
  
 body:has(section:nth-of-type(1) > div:first-of-type ul:nth-of-type(1) li:nth-child(2):hover) {
-    background: var(--color-note-b);
-    transition: background 0.3s ease-in-out; 
+    background-color: var(--color-note-b);
+    transition: background-color 0.3s ease-in-out; 
 }
  
 body:has(section:nth-of-type(1) > div:first-of-type ul:nth-of-type(1) li:nth-child(3):hover) {
-    background: var(--color-note-c);
-    transition: background 0.3s ease-in-out; 
+    background-color: var(--color-note-c);
+    transition: background-color 0.3s ease-in-out; 
 }
  
 body:has(section:nth-of-type(1) > div:first-of-type ul:nth-of-type(1) li:nth-child(4):hover) {
-    background: var(--color-note-d);
-    transition: background 0.3s ease-in-out; 
+    background-color: var(--color-note-d);
+    transition: background-color 0.3s ease-in-out; 
 }
  
 body:has(section:nth-of-type(1) > div:first-of-type ul:nth-of-type(1) li:nth-child(6):hover) {
-    background: var(--color-note-e);
-    transition: background 0.3s ease-in-out; 
+    background-color: var(--color-note-e);
+    transition: background-color 0.3s ease-in-out; 
 }
  
 body:has(section:nth-of-type(1) > div:first-of-type ul:nth-of-type(1) li:nth-child(7):hover) {
-    background: var(--color-note-f);
-    transition: background 0.3s ease-in-out; 
+    background-color: var(--color-note-f);
+    transition: background-color 0.3s ease-in-out; 
 }
  
 body:has(section:nth-of-type(1) > div:first-of-type ul:nth-of-type(1) li:nth-child(8):hover) {
-    background: var(--color-note-g);
-    transition: background 0.3s ease-in-out; 
+    background-color: var(--color-note-g);
+    transition: background-color 0.3s ease-in-out; 
 }
  
 body:has(section:nth-of-type(1) > div:first-of-type ul:nth-of-type(1) li:nth-child(9):hover) {
@@ -196,7 +268,7 @@ animation: background09 350ms linear forwards;
 }
 @keyframes background09 {
     to {
-        background: var(--color-note-a-sharp);
+        background-color: var(--color-note-a-sharp);
     }
 }
 section:nth-of-type(1) > div:first-of-type ul:first-of-type:has(li:nth-child(1):hover) li:nth-child(5) {
@@ -232,18 +304,23 @@ section:nth-of-type(1)  ul:nth-of-type(2) {
     height: 100%;
     display: flex;
     flex-direction: row;
-    gap: 1em;
+    gap: var(--controller-gap);
 }
-section:nth-of-type(1)  ul:nth-of-type(2) li{
+section:nth-of-type(1)  ul:nth-of-type(2) li,
+section:nth-of-type(1)  ul:nth-of-type(2) li label{
     display: none;
-    width: 4rem;
-    height: 4rem;
-    background-color: greenyellow;
+    width: var(--controller-height-top);
+    height: var(--controller-height-top);
+    background-color:var(--drumpad-color);
     flex-shrink: 0;
     border-radius: var(--controller-border-radius);
+    cursor: pointer;
     
-    &:hover {
-    background-color:red;}
+    &:hover{
+        background-color: var(--color-note-c);
+        outline: 0px solid var(--color-note-c);
+        animation: --border 500ms ease-out infinite alternate;
+    }
 }
 
 section:nth-of-type(1)  ul:nth-of-type(2) li input[type="radio"] {
@@ -252,21 +329,16 @@ section:nth-of-type(1)  ul:nth-of-type(2) li input[type="radio"] {
     opacity: 0; 
 }
 
-section:nth-of-type(1)  ul:nth-of-type(2) li label {
-    width: 4rem;
-    height: 4rem;
-    background-color:teal;
-    border-radius: 8px;
-    display: inline-block; /* Allows block-like styling */
-    cursor: pointer;
-    
-    &:hover{
-        background-color: #32CD32;
-    }
+
+@keyframes --border {
+from {
+    outline: 0px solid var(--color-note-c);}
+to{
+    outline: 5px solid var(--color-note-c);}
 }
 
 section:nth-of-type(1)  ul:nth-of-type(2) li input[type="radio"]:checked + label {
-    background-color: blue; 
+    background-color: var(--color-note-c-sharp);
 }
 
 
@@ -281,8 +353,11 @@ section:nth-of-type(1)  ul:nth-of-type(2) li:nth-of-type(2) {
 /* scherm */ /* scherm */ /* scherm */ /* scherm */
 
 section:nth-of-type(1) > div:first-of-type > div {
-background: red;
-height: 100%;
+background-color: var(--display-color);
+/* box-shadow: 
+    inset -5px -5px 0px var(--display-color-border),
+    inset 5px 5px 0px var(--display-color-border);*/
+height: 100%; 
 width: 10%;
 flex-grow: 2;
 border-radius: var(--keys-radius);
@@ -292,7 +367,7 @@ border-radius: var(--keys-radius);
 /* onderkant */ /* onderkant */ /* onderkant */
 
 section:nth-of-type(1) > div:last-of-type {
-    height: var(--height-bottom);
+    height: var(--controller-height-bottom);
     display: flex;
     justify-content: center;
     
@@ -315,16 +390,16 @@ section:nth-of-type(1) > div:last-of-type ul {
 
 
 section:nth-of-type(1) > div:last-of-type ul li {
-    background:var(--keys-white-color);
+    background-color:var(--keys-white-color);
     width: var(--keys-white-width);
     flex-shrink: 0;
-    height: 100%;
+    height: var(--keys-white-height);
     border-radius:var(--keys-radius);
 
 }
 
 section:nth-of-type(1) > div:last-of-type ul li:hover {
-    background: var(--keys-white-hover);
+    background-color: var(--keys-white-hover);
 }
 
 section:nth-of-type(1) > div:last-of-type ul li:first-of-type{
@@ -336,6 +411,9 @@ section:nth-of-type(1) > div:last-of-type ul li:last-of-type{
     border-bottom-right-radius: var(--keys-radius-edge);
 }
 
+
+/* white keys */ /* white keys */ /* white keys */
+
 section:nth-of-type(1) > div:last-of-type ul li:nth-child(12n + 1),
 section:nth-of-type(1) > div:last-of-type ul li:nth-child(12n + 3),
 section:nth-of-type(1) > div:last-of-type ul li:nth-child(12n + 5),
@@ -343,7 +421,7 @@ section:nth-of-type(1) > div:last-of-type ul li:nth-child(12n + 6),
 section:nth-of-type(1) > div:last-of-type ul li:nth-child(12n + 8),
 section:nth-of-type(1) > div:last-of-type ul li:nth-child(12n + 10),
 section:nth-of-type(1) > div:last-of-type ul li:nth-child(12n + 12) {
-    border: solid black 1px;
+    border: var(--keys-white-border);
 }
 
 
@@ -358,7 +436,7 @@ section:nth-of-type(1) > div:last-of-type ul li:nth-child(12n + 11) {
     position: relative;
     margin-left: calc(var(--piano-keys) * -0.5);
     transform: translateX( calc(var(--piano-keys) * 0.25) );
-    background: var(--keys-black-color);
+    background-color: var(--keys-black-color);
     height: var(--keys-black-height);
     outline:2px solid var(--keys-black-color);
     border-top-left-radius: 0;
@@ -428,30 +506,33 @@ section:nth-of-type(2) {
     height: 100vh;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(16, 1fr);
-    gap: 1rem;
-    z-index: -1;
+    gap: var(--controller-padding);
+    z-index: -999;
     mix-blend-mode:overlay;
     color:#000000;
 }
 
 section:nth-of-type(2) div {
+    animation: weight-animation 5s linear infinite alternate;
+    transform-origin:center;
     &::after {
-        content: 'uit';
-        font-size: 30cqw; /* Works in supporting browsers */
+        animation: weight-animation 5s linear infinite alternate;
+        content: 'party';
+        font-size: 24cqw; 
         font-family: 'Tiny5';
         font-variation-settings: 'wght' 50;
-        animation: weight-animation 5s linear infinite alternate;
+        
     }
 }
 
 @keyframes weight-animation {
     from {
         font-variation-settings: 'wght' 50;
-        transform: scale(1);
+        transform: scale(1.3);
     }
     to {
         font-variation-settings: 'wght' 300;
-        transform: scale(10);
+        transform: scale(1);
     }
 }
 
