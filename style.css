@@ -5,123 +5,418 @@
 }
 
 html {
---background-color:hsl(204, var(--gradient-percent), 50%);
+    --background-color:hsl(204, var(--gradient-percent), 50%);
+    --background-color-text:#878787;
+    --screen-content:url(./images/stijn01.gif);
+    --cable-color:hsl(0, var(--gradient-percent), 48%);
+    --gradient-percent: 50%;
 
---controller-width: round(down, 90vw, calc( (var(--piano-width) ) ) );
---controller-height: 12em;
---controller-height-top:4rem;
---controller-height-bottom:8rem;
---controller-border-radius: 0.5rem;
---controller-padding:1rem;
---controller-gap:1rem;
---controller-color:#222222;
---gradient-percent: 50%;
-
---piano-keys: 2.5rem;
---piano-width: calc( (var(--piano-keys) + var(--border-width-2))*  7);
---piano-radius: 3em 1em 1em 1em;
-
---joystick-color: var(--color-note-c);
---joystick-radius: 25%;
---joystick-width: 4rem;
---joystick-height: var(--joystick-width);
-
---drumpad-keys: 4rem;
---drumpad-width: calc( var(--drumpad-width) + 1rem );
---drumpad-radius:1rem;
---drumpad-color:#ffffff;
-
---display-color:#606c38;
---display-color-highlight: #283618;
---display-color-border:#1b2410;
-
---border-width: 1px;
---border-width-2: calc( var(--border-width) * 2 );
-
---keys-radius:.3rem;
---keys-radius-edge:0.3rem;
-
---keys-white-hover:#d3d3d3;
---keys-white-width: var(--piano-keys);
---keys-white-height: 100%;
---keys-white-border: solid var(--controller-color) 1px;
-
---keys-black-width:calc( var(--piano-width) * 0.5 );
-
---keys-black-height:50%;
-
---keys-white-color:#fff;
---keys-black-color:var(--controller-color);
-
---color-note-c: #FF4D4D;      /* Vibrant Red */
---color-note-c-sharp: #FF914D; /* Vibrant Orange */
---color-note-d: #FFD700;      /* Vibrant Gold */
---color-note-d-sharp: #FFE34D; /* Vibrant Yellow */
---color-note-e: #ADFF2F;      /* Vibrant Green-Yellow */
---color-note-f: #32CD32;      /* Vibrant Lime Green */
---color-note-f-sharp: #00FA9A; /* Vibrant Mint Green */
---color-note-g: #00CED1;      /* Vibrant Cyan */
---color-note-g-sharp: #1E90FF; /* Vibrant Blue */
---color-note-a: #8A2BE2;      /* Vibrant Indigo */
---color-note-a-sharp: #D02090; /* Vibrant Violet */
---color-note-b: #FF1493;      /* Vibrant Pink */
+    --controller-width: round(down, 90vw, calc( (var(--piano-width) ) ) );
+    --controller-height: 12em;
+    --controller-height-top:4rem;
+    --controller-height-bottom:8rem;
+    --controller-border-radius: 0.5rem;
+    --controller-padding:1rem;
+    --controller-gap:1rem;
+    --controller-color:#222222;
+   
+    
+    --piano-keys: 2.5rem;
+    --piano-width: calc( (var(--piano-keys) + var(--border-width-2))*  7);
+    --piano-radius: 3em 1em 1em 1em;
+    
+    --joystick-color: hsl(0, var(--gradient-percent), 48%);
+    --joystick-color-background:hsl(0, var(--gradient-percent), 17%);
+    --joystick-radius: 50%;
+    --joystick-width: 4rem;
+    --joystick-height: var(--joystick-width);
+    
+    --drumpad-keys: 4rem;
+    --drumpad-width: calc( var(--drumpad-width) + 1rem );
+    --drumpad-radius:1rem;
+    --drumpad-hover:var(--cable-color);
+    --drumpad-color:#dd1111;
+    --drumpad-color-active:#a20707;
+    
+    --display-color:#606c38;
+    --display-color-highlight: #283618;
+    --display-color-border:#1b2410;
+    --display-radius: 1rem;
+    
+    --border-width: 1px;
+    --border-width-2: calc( var(--border-width) * 2 );
+    
+    --keys-radius:.3rem;
+    --keys-radius-edge:0.3rem;
+    
+    --keys-white-hover:#d3d3d3;
+    --keys-white-width: var(--piano-keys);
+    --keys-white-height: 100%;
+    --keys-white-border: solid var(--controller-color) 1px;
+    --keys-white-color:#fff;
+    
+    --keys-black-width:calc( var(--piano-width) * 0.5 );
+    --keys-black-color:var(--controller-color);
+    --keys-black-height:50%;
+    
+    --color-note-c: hsl(0, var(--gradient-percent), 65%);      /* Vibrant Red */
+    --color-note-c-sharp: hsl(23, var(--gradient-percent), 65%); /* Vibrant Orange */
+    --color-note-d: hsl(51, var(--gradient-percent), 50%);      /* Vibrant Gold */
+    --color-note-d-sharp: hsl(51, var(--gradient-percent), 65%); /* Vibrant Yellow */
+    --color-note-e: hsl(84, var(--gradient-percent), 59%);      /* Vibrant Green-Yellow */
+    --color-note-f: hsl(120, var(--gradient-percent), 50%);      /* Vibrant Lime Green */
+    --color-note-f-sharp: hsl(157, var(--gradient-percent), 49%); /* Vibrant Mint Green */
+    --color-note-g: hsl(18 var(--gradient-percent), 41%);      /* Vibrant Cyan */
+    --color-note-g-sharp: hsl(210, var(--gradient-percent), 56%); /* Vibrant Blue */
+    --color-note-a: hsl(271,var(--gradient-percent), 53%);      /* Vibrant Indigo */
+    --color-note-a-sharp: hsl(322,var(--gradient-percent), 47%); /* Vibrant Violet */
+    --color-note-b: hsl(328, var(--gradient-percent), 54%);      /* Vibrant Pink */
 }
 
 
-html:has(#white:checked) {
-    --controller-color:#cecece;
-    --keys-white-color:#222;
-}
-
-html:has(#tom:checked) {
-    --controller-color:#F97502;
-    --keys-white-color:#043E68;
+/* 2e knop */
+html:has(input#tom:checked) {
+    --screen-content:url(./images/tom01.gif);
+    --cable-color:#5ED5F0;
+    --background-color:hsl(28, var(--gradient-percent), 49%);
+    --controller-color: #043E68;
+    --keys-white-color: #5ED5F0;
+    --keys-black-color: #123b44;
+    --piano-radius: 0;
+    --drumpad-radius:0;
+    --drumpad-color:#03759E;
+    --drumpad-color-active:#FF7A00;
+    --keys-radius: 0;
+    
+    --joystick-color: #FF7A00;
+    --joystick-color-background:#001f36;
+    
     --color-note-c: #FF7A00;      /* Warm Orange */
     --color-note-c-sharp: #C4400B; /* Deep Reddish-Orange */
-    --color-note-d: #00345B;      /* Dark Navy Blue */
-    --color-note-d-sharp: #006188; /* Deep Cyan Blue */
-    --color-note-e: #009AC1;      /* Vibrant Sky Blue */
-    --color-note-f: #58C8E6;      /* Light Cyan Blue */
+    --color-note-d: #5b1b00;      /* Dark Navy Blue */
+    --color-note-d-sharp: #d9cb05; /* Deep Cyan Blue */
+    --color-note-e: #c11700;      /* Vibrant Sky Blue */
+    --color-note-f: #daba2e;      /* Light Cyan Blue */
     --color-note-f-sharp: #FF7A00; /* Repeated Warm Orange for consistency */
     --color-note-g: #C4400B;      /* Repeated Deep Reddish-Orange for contrast */
-    --color-note-g-sharp: #00345B; /* Repeated Dark Navy Blue for balance */
-    --color-note-a: #006188;      /* Repeated Deep Cyan Blue */
-    --color-note-a-sharp: #009AC1; /* Repeated Vibrant Sky Blue */
-    --color-note-b: #58C8E6;      /* Repeated Light Cyan Blue */
-}
-html:has(#kim:checked) {
-    --controller-color:#6BAA32;
-    --keys-white-color:#60D1F8;
-    --keys-black-color:#FFB5D7;
-    --color-note-c: #6BAA32;      /* Bright Grass Green */
-    --color-note-c-sharp: #477519; /* Dark Leaf Green */
-    --color-note-d: #F4CC4E;      /* Soft Yellow Flower */
-    --color-note-d-sharp: #D2892D; /* Warm Orange-Brown (Tree Trunk) */
-    --color-note-e: #8E5B37;      /* Earthy Brown (Tree Base) */
-    --color-note-f: #99C6F2;      /* Light Sky Blue */
-    --color-note-f-sharp: #4F8DC5; /* Deep Sky Blue */
-    --color-note-g: #EB8E48;      /* Warm Peach (Castle Roof) */
-    --color-note-g-sharp: #8A5FA8; /* Soft Purple (Flowers) */
-    --color-note-a: #D685B7;      /* Light Pink (Flowers) */
-    --color-note-a-sharp: #F6E7B6; /* Pale Cream (Castle Details) */
-    --color-note-b: #567230;      /* Shadowed Green (Bush Highlights) */
+    --color-note-g-sharp: #eb8612; /* Repeated Dark Navy Blue for balance */
+    --color-note-a: #e0d20f;      /* Repeated Deep Cyan Blue */
+    --color-note-a-sharp: #df531f; /* Repeated Vibrant Sky Blue */
+    --color-note-b: #f1aa11;      /* Repeated Light Cyan Blue */
 }
 
-html:has(#abby:checked) {
-    --color-note-c: #D09099;      /* Soft Dusty Rose (Background) */
-    --color-note-c-sharp: #1C1C1C; /* Deep Charcoal Black (Text) */
-    --color-note-d: #8A6F74;      /* Muted Mauve (Subtle Shadows) */
-    --color-note-d-sharp: #B8878F; /* Warm Blush Pink (Highlights) */
-    --color-note-e: #3A2D32;      /* Dark Plum (Logo Accent) */
-    --color-note-f: #E3C6CC;      /* Pale Rose (Soft Light Areas) */
-    --color-note-f-sharp: #654A4F; /* Warm Brownish Gray (Details) */
-    --color-note-g: #F4E9EB;      /* Soft Creamy Pink (Lightest Tone) */
-    --color-note-g-sharp: #5E454A; /* Muted Wine (Subtle Accents) */
-    --color-note-a: #AA8D93;      /* Soft Taupe (Neutral Balance) */
-    --color-note-a-sharp: #2E1F23; /* Rich Brown (Deepest Shadows) */
-    --color-note-b: #CBA4AA;      /* Warm Pastel Pink (Secondary Accent) */
+/* 3e knop */
+html:has(input#kim:checked) {
+    --screen-content: url(./images/kim.gif);
+    --cable-color: #A0D1F9;           /* Vivid Leaf Green */
+    --background-color: hsl(120, var(--gradient-percent), 55%); /* Bright Fresh Green */
+    --controller-color: #5BAF4E;        /* Soft Forest Green */
+    --keys-white-color: #A0D1F9;        /* Light Sky Blue */
+    --keys-black-color: #2D5B75;        /* Deep Ocean Blue */
+    --piano-radius: 1rem 5rem 1rem 5rem;
+    --drumpad-radius: 3rem 2rem 1rem 3rem;
+    --drumpad-color: #78C850;           /* Lush Grass Green */
+    --drumpad-color-active: #94EA31;    /* Electric Leaf Green */
+    --keys-radius: 1rem 5rem 1rem 1rem;
+    --display-radius: 1rem 5rem 1rem 1rem;
+    --joystick-color: #FFB5D7;          /* Sky Blue */
+    --joystick-color-background: #4E7BAA; /* Soft Marine Blue */
+
+    /* Forest-Inspired Color Palette for Notes */
+    --color-note-c: #94EA31;         /* Vivid Grass Green */
+    --color-note-c-sharp: #76B051;   /* Mossy Green */
+    --color-note-d: #4D9E71;         /* Deep Forest Green */
+    --color-note-d-sharp: #6ECB63;   /* Fresh Meadow Green */
+    --color-note-e: #A0D1F9;         /* Soft Sky Blue */
+    --color-note-f: #82CFF5;         /* Light Aqua Blue */
+    --color-note-f-sharp: #5098D1;   /* Bright Azure */
+    --color-note-g: #94EA31;         /* Vivid Leaf Green */
+    --color-note-g-sharp: #5AB77E;   /* Soft Emerald */
+    --color-note-a: #A0D1F9;         /* Pastel Sky Blue */
+    --color-note-a-sharp: #78B3C9;   /* Serene Blue-Green */
+    --color-note-b: #3A8FBE;         /* Ocean Teal */
 }
 
+/* 4e knop */
+html:has(input#abby:checked) {
+    --screen-content: url(./images/abby01.gif);
+    --cable-color: #F2D5D9;            /* Soft Muted Pink */
+    --background-color: hsl(340, 40%, 85%); /* Pale Blush Pink */
+    --controller-color: #8B6F74;        /* Dusty Rose */
+    --keys-white-color: #F2D5D9;        /* Soft Muted Pink */
+    --keys-black-color: #5C3A42;        /* Deep Mauve */
+    --piano-radius: 0;
+    --drumpad-radius: 0;
+    --drumpad-color: #D8A5AC;           /* Muted Rosewood */
+    --drumpad-color-active: #F28B97;    /* Warm Coral Pink */
+    --keys-radius: 0;
+
+    --joystick-color: #F28B97;          /* Warm Coral Pink */
+    --joystick-color-background: #7A565C; /* Soft Plum */
+
+    /* Muted Pink Color Palette for Notes */
+    --color-note-c: #E6A5AE;         /* Muted Cherry Blossom */
+    --color-note-c-sharp: #D28E96;   /* Soft Mulberry */
+    --color-note-d: #C47882;         /* Blush Mauve */
+    --color-note-d-sharp: #E6BBC4;   /* Soft Rose Petal */
+    --color-note-e: #D29BA1;         /* Dusky Pink */
+    --color-note-f: #E3C1C6;         /* Pale Peach Blush */
+    --color-note-f-sharp: #EAA2AB;   /* Gentle Dusty Rose */
+    --color-note-g: #B97E88;         /* Muted Mauve Plum */
+    --color-note-g-sharp: #F4CDD2;   /* Light Rosy Mist */
+    --color-note-a: #C27A84;         /* Warm Dusky Pink */
+    --color-note-a-sharp: #D48F97;   /* Soft Coral Pink */
+    --color-note-b: #E6AEB6;         /* Delicate Rose Quartz */
+}
+
+/* 5e */
+html:has(input#chris:checked) {
+    --screen-content: url(./images/stijn.gif);
+    --cable-color: #94EA31;           /* Vivid Seaweed Green */
+    --background-color: #A0D1F9;      /* Ocean Breeze Blue */
+    --controller-color: #5F9EB8;      /* Deep Sea Blue */
+    --keys-white-color: #94EA31;      /* Bright Leaf Green */
+    --keys-black-color: #416572;      /* Deep Lagoon Blue */
+    --piano-radius: 0;
+    --drumpad-radius: 0;
+    --drumpad-color: #7EB8D9;         /* Soft Aqua */
+    --drumpad-color-active: #94EA31;  /* Bright Green */
+    --keys-radius: 0;
+
+    --joystick-color: #A0D1F9;        /* Light Sky Blue */
+    --joystick-color-background: #4D89A5; /* Dark Aqua Blue */
+
+    --color-note-c: #94EA31;         /* Vivid Green */
+    --color-note-c-sharp: #7ABF69;   /* Algae Green */
+    --color-note-d: #A0D1F9;         /* Soft Ocean Blue */
+    --color-note-d-sharp: #8CC8E3;   /* Pale Sky */
+    --color-note-e: #5BA7CF;         /* Cool Water Blue */
+    --color-note-f: #3C88AF;         /* Deep Aqua */
+    --color-note-f-sharp: #94EA31;   /* Bright Leaf Green */
+    --color-note-g: #6FB1D5;         /* Serene Blue */
+    --color-note-g-sharp: #5098C1;   /* Dark Sky Blue */
+    --color-note-a: #A0D1F9;         /* Sky Blue */
+    --color-note-a-sharp: #82C3F7;   /* Bright Daylight */
+    --color-note-b: #3A7FAC;         /* Deep Lagoon */
+}
+
+/* 6e */
+html:has(input#lisa:checked) {
+    --screen-content: url(./images/soulja.gif);
+    --cable-color: #94EA31;           /* Vivid Grass Green */
+    --background-color: #A2D38D;      /* Soft Mint Green */
+    --controller-color: #74B25D;      /* Muted Moss Green */
+    --keys-white-color: #A0D1F9;      /* Light Sky Blue */
+    --keys-black-color: #4F7568;      /* Deep Pine Green */
+    --piano-radius: 0;
+    --drumpad-radius: 0;
+    --drumpad-color: #8AD48A;         /* Fresh Spring Green */
+    --drumpad-color-active: #94EA31;  /* Electric Leaf Green */
+    --keys-radius: 0;
+
+    --joystick-color: #A0D1F9;        /* Soft Sky Blue */
+    --joystick-color-background: #6189A0; /* Cool Steel Blue */
+
+    --color-note-c: #94EA31;         /* Vivid Grass Green */
+    --color-note-c-sharp: #6AAE55;   /* Forest Floor Green */
+    --color-note-d: #C3E39F;         /* Pale Spring Green */
+    --color-note-d-sharp: #E0EAB8;   /* Sunlit Meadow */
+    --color-note-e: #A0D1F9;         /* Pastel Sky Blue */
+    --color-note-f: #8FC4E8;         /* Fresh Blue Breeze */
+    --color-note-f-sharp: #5A97B1;   /* Deep Ocean Breeze */
+    --color-note-g: #94EA31;         /* Vivid Leaf Green */
+    --color-note-g-sharp: #66B87D;   /* Soft Emerald */
+    --color-note-a: #A0D1F9;         /* Soft Sky Blue */
+    --color-note-a-sharp: #81B5D4;   /* Muted Cloud Blue */
+    --color-note-b: #4A99C4;         /* Cool Teal */
+}
+
+/* 7e */
+html:has(input#mystic:checked) {
+    --screen-content: url(./images/mystic.gif);
+    --cable-color: #9D4EDD;           /* Vivid Purple */
+    --background-color: #AFA2F9;      /* Soft Lavender Blue */
+    --controller-color: #7A48A7;      /* Deep Royal Purple */
+    --keys-white-color: #A0D1F9;      /* Sky Blue */
+    --keys-black-color: #4B2E5B;      /* Dark Plum */
+    --piano-radius: 0;
+    --drumpad-radius: 0;
+    --drumpad-color: #9D4EDD;         /* Bright Purple */
+    --drumpad-color-active: #C678DD;  /* Soft Magenta */
+    --keys-radius: 0;
+
+    --joystick-color: #A0D1F9;        /* Light Blue */
+    --joystick-color-background: #5A3A76; /* Muted Violet */
+
+    --color-note-c: #9D4EDD;          /* Vibrant Purple */
+    --color-note-c-sharp: #6E308F;    /* Royal Indigo */
+    --color-note-d: #AFA2F9;          /* Soft Lavender Blue */
+    --color-note-d-sharp: #8564C1;    /* Lilac Mist */
+    --color-note-e: #A0D1F9;          /* Light Sky Blue */
+    --color-note-f: #7B88E3;          /* Soft Periwinkle */
+    --color-note-f-sharp: #4A2672;    /* Deep Eggplant */
+    --color-note-g: #9D4EDD;          /* Bright Purple */
+    --color-note-g-sharp: #784BA1;    /* Soft Orchid */
+    --color-note-a: #A0D1F9;          /* Pale Blue */
+    --color-note-a-sharp: #7A68D4;    /* Soft Lavender */
+    --color-note-b: #593D86;          /* Deep Purple Night */
+}
+/* 8e */
+html:has(input#jana:checked) {
+    --screen-content: url(./images/dancing_cat.gif);
+    --background-color-text:#ffffff;
+    --background-color:hsl(271 var(--gradient-percent), 53%);
+    --cable-color:#ffd700;        
+    --background-color: #AFA2F9;      /* Soft Lavender Blue */
+    --controller-color: #7A48A7;      /* Deep Royal Purple */
+    --keys-white-color: #A0D1F9;      /* Sky Blue */
+    --keys-black-color: #4B2E5B;      /* Dark Plum */
+    --piano-radius: 5rem 5rem 1rem 1rem;
+    --drumpad-radius: 1rem;
+    --drumpad-color: #9D4EDD;         /* Bright Purple */
+    --drumpad-color-active: #C678DD;  /* Soft Magenta */
+    --keys-radius: 5rem;
+    --display-radius: 1rem 5rem 1rem 1rem;
+    
+    --joystick-color: #ffd700;        /* Light Blue */
+    --joystick-color-background: #5A3A76; /* Muted Violet */
+
+    --color-note-c: #9D4EDD;          /* Vibrant Purple */
+    --color-note-c-sharp: #6E308F;    /* Royal Indigo */
+    --color-note-d: #AFA2F9;          /* Soft Lavender Blue */
+    --color-note-d-sharp: #8564C1;    /* Lilac Mist */
+    --color-note-e: #A0D1F9;          /* Light Sky Blue */
+    --color-note-f: #7B88E3;          /* Soft Periwinkle */
+    --color-note-f-sharp: #4A2672;    /* Deep Eggplant */
+    --color-note-g: #9D4EDD;          /* Bright Purple */
+    --color-note-g-sharp: #784BA1;    /* Soft Orchid */
+    --color-note-a: #A0D1F9;          /* Pale Blue */
+    --color-note-a-sharp: #7A68D4;    /* Soft Lavender */
+    --color-note-b: #593D86;          /* Deep Purple Night */
+}
+/* 9e*/
+html:has(input#inverted:checked) {
+    --screen-content: url(./images/inverted.gif);
+    --cable-color: #000000;           /* Inverted Green */
+    --background-color: #6a6a6a;      /* Inverted Blue */
+    --controller-color: #222222;      /* Inverted Deep Blue */
+    --keys-white-color: #000000;      /* Inverted Sky Blue */
+    --keys-black-color: #ffffff;      /* Inverted Deep Teal */
+    --piano-radius: 0;
+    --drumpad-radius: 0;
+    --drumpad-color: #ffffff;         /* Inverted Green */
+    --drumpad-color-active: #000000;  /* Inverted Orange */
+    --keys-radius: 0;
+
+    --joystick-color: #000000;        /* Inverted Green */
+    --joystick-color-background: #F5E3D9; /* Inverted Dark Blue */
+
+    --color-note-c: #3f3f3f;          /* Inverted Green */
+    --color-note-c-sharp: #252525;    /* Inverted Reddish Orange */
+    --color-note-d: #7e7e7e;          /* Inverted Dark Blue */
+    --color-note-d-sharp: #202020;    /* Inverted Light Blue */
+    --color-note-e: #777777;          /* Inverted Cyan Blue */
+    --color-note-f: #dedede;          /* Inverted Sky Blue */
+    --color-note-f-sharp: #1e1e1e;    /* Inverted Warm Orange */
+    --color-note-g: #cdcdcd;          /* Inverted Green */
+    --color-note-g-sharp: #242424;    /* Inverted Deep Orange */
+    --color-note-a: #d6d6d6;          /* Inverted Sky Blue */
+    --color-note-a-sharp: #323232;    /* Inverted Cool Blue */
+    --color-note-b: #e2e2e2;          /* Inverted Soft Cyan */
+}
+
+/* 10e */
+html:has(input#sunset:checked) {
+    --screen-content: url(./images/dog.gif);
+    --cable-color: #FF7E67; /* Warm Coral */
+    --background-color: hsl(14, 80%, 50%); /* Sunset Orange */
+    --controller-color: #F5A623; /* Golden Yellow */
+    --keys-white-color: #FEE440; /* Bright Sun */
+    --keys-black-color: #8B4000; /* Burnt Orange */
+    --piano-radius: 0.25rem;
+    --drumpad-radius: 0.5rem;
+    --drumpad-color: #FA5F55; /* Warm Red */
+    --drumpad-color-active: #FAD02E; /* Golden */
+    --keys-radius: 0.5rem;
+
+    --joystick-color: #FF9D76; /* Soft Peach */
+    --joystick-color-background: #752F00; /* Deep Brown */
+
+    --color-note-c: #F95F62; 
+    --color-note-c-sharp: #D9480F; 
+    --color-note-d: #FA824C; 
+    --color-note-d-sharp: #FEE440; 
+    --color-note-e: #FC9A2D; 
+    --color-note-f: #E36414; 
+    --color-note-f-sharp: #FF7E67; 
+    --color-note-g: #F5A623; 
+    --color-note-g-sharp: #D9480F; 
+    --color-note-a: #E55B3C; 
+    --color-note-a-sharp: #C03A00; 
+    --color-note-b: #FF9D76; 
+}
+
+/* 11e */
+
+html:has(input#mint:checked) {
+    --screen-content: url(./images/tom.gif);
+    --cable-color: #64F5D3; /* Fresh Mint */
+    --background-color: hsl(160, 80%, 45%); /* Minty Green */
+    --controller-color: #2FA57C; /* Darker Mint */
+    --keys-white-color: #E1FFF9; /* Soft Ice */
+    --keys-black-color: #11695E; /* Deep Teal */
+    --piano-radius: 0.75rem;
+    --drumpad-radius: 0.5rem;
+    --drumpad-color: #45D09E; /* Light Mint */
+    --drumpad-color-active: #99FFE0; /* Pale Mint */
+    --keys-radius: 0.5rem;
+
+    --joystick-color: #64F5D3; /* Fresh Mint */
+    --joystick-color-background: #145E50; /* Dark Forest */
+
+    --color-note-c: #45D09E; 
+    --color-note-c-sharp: #64F5D3; 
+    --color-note-d: #2FA57C; 
+    --color-note-d-sharp: #99FFE0; 
+    --color-note-e: #4AAE9B; 
+    --color-note-f: #3B8E74; 
+    --color-note-f-sharp: #64F5D3; 
+    --color-note-g: #2FA57C; 
+    --color-note-g-sharp: #99FFE0; 
+    --color-note-a: #3B8E74; 
+    --color-note-a-sharp: #11695E; 
+    --color-note-b: #E1FFF9; 
+}
+/* 12e */
+html:has(input#rainbow:checked) {
+    --screen-content: url(./images/abby.gif);
+    --cable-color: #FF477E; /* Bright Pink */
+    --background-color: hsl(280, 80%, 45%); /* Vivid Purple */
+    --controller-color: #FFD700; /* Gold */
+    --keys-white-color: #FFFFFF; /* Pure White */
+    --keys-black-color: #000000; /* Pure Black */
+    --piano-radius: 1rem;
+    --drumpad-radius: 0.5rem;
+    --drumpad-color: #FF6B6B; /* Warm Red */
+    --drumpad-color-active: #FFB86C; /* Sunny Orange */
+    --keys-radius: 0.75rem;
+
+    --joystick-color: #49D6FF; /* Electric Blue */
+    --joystick-color-background: #1E1E1E; /* Dark Grey */
+
+    --color-note-c: #FF6B6B; /* Warm Red */
+    --color-note-c-sharp: #FFA94D; /* Orange */
+    --color-note-d: #FFD700; /* Gold */
+    --color-note-d-sharp: #A1E55D; /* Lime Green */
+    --color-note-e: #32CD32; /* Bright Green */
+    --color-note-f: #49D6FF; /* Electric Blue */
+    --color-note-f-sharp: #7B68EE; /* Medium Purple */
+    --color-note-g: #9370DB; /* Light Purple */
+    --color-note-g-sharp: #FF69B4; /* Hot Pink */
+    --color-note-a: #FF477E; /* Bright Pink */
+    --color-note-a-sharp: #FF1493; /* Deep Pink */
+    --color-note-b: #FF4500; /* Orange-Red */
+}
 * {
     padding: 0;
     margin: 0;
@@ -169,7 +464,7 @@ input[type=range]{
 input[type=range]::-webkit-slider-runnable-track {
     width: 1rem;
     /* background: transparent; */
-    background: linear-gradient(var(--color-note-a) var(--gradient-percent), rgba(255,46,46,0) var(--gradient-percent));
+    background: linear-gradient(var(--cable-color) var(--gradient-percent), rgba(255,46,46,0) var(--gradient-percent));
 }
 
 input[type=range]::-webkit-slider-thumb {
@@ -178,7 +473,7 @@ input[type=range]::-webkit-slider-thumb {
     width: 2rem;
     border-top-right-radius: .5rem;
     border-top-left-radius: .5rem;
-    background: var(--color-note-a);
+    background: var(--cable-color);
     box-shadow: 0 10px 0 gray;
     cursor: pointer;
     transform: translateX(-.5rem);
@@ -214,7 +509,7 @@ section:nth-of-type(1) > div:first-of-type ul:nth-of-type(1){
     height: var(--joystick-height);
     width: var(--joystick-width);
     
-    background-color: var(--keys-white-color);
+    background-color: var(--joystick-color-background);
     border-radius: var(--joystick-radius);
     flex-shrink:0;
     
@@ -306,42 +601,46 @@ section:nth-of-type(1)  ul:nth-of-type(2) {
     flex-direction: row;
     gap: var(--controller-gap);
 }
-section:nth-of-type(1)  ul:nth-of-type(2) li,
-section:nth-of-type(1)  ul:nth-of-type(2) li label{
+section:nth-of-type(1)  ul:nth-of-type(2) li {
     display: none;
     width: var(--controller-height-top);
     height: var(--controller-height-top);
-    background-color:var(--drumpad-color);
     flex-shrink: 0;
-    border-radius: var(--controller-border-radius);
+    border-radius: var(--drumpad-radius);
     cursor: pointer;
     
     &:hover{
-        background-color: var(--color-note-c);
-        outline: 0px solid var(--color-note-c);
+        background-color: var(--drumpad-hover);
+        outline: 0px solid var(--color-note-b);
         animation: --border 500ms ease-out infinite alternate;
     }
 }
 
+section:nth-of-type(1) ul:nth-of-type(2) li label {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--drumpad-radius);
+    background-color:var(--drumpad-color);
+}
+
 section:nth-of-type(1)  ul:nth-of-type(2) li input[type="radio"] {
-    appearance: none;
-    position: absolute;
-    opacity: 0; 
+    display: none;
+    width: 100%;
+    height:100%;
+}
+
+section:nth-of-type(1) ul:nth-of-type(2) li input[type="radio"]:checked + label {
+    background-color: var(--drumpad-color-active) /* Apply when radio is checked */
 }
 
 
 @keyframes --border {
-from {
-    outline: 0px solid var(--color-note-c);}
-to{
-    outline: 5px solid var(--color-note-c);}
-}
-
-section:nth-of-type(1)  ul:nth-of-type(2) li input[type="radio"]:checked + label {
-    background-color: var(--color-note-c-sharp);
-}
-
-
+    from {
+        outline: 0px solid var(--color-note-c);}
+    to{
+        outline: 5px solid var(--color-note-c);}
+    }
 /* default state 2 drumpads zichtbaar */
 
 section:nth-of-type(1)  ul:nth-of-type(2) li:nth-of-type(1),
@@ -353,14 +652,16 @@ section:nth-of-type(1)  ul:nth-of-type(2) li:nth-of-type(2) {
 /* scherm */ /* scherm */ /* scherm */ /* scherm */
 
 section:nth-of-type(1) > div:first-of-type > div {
-background-color: var(--display-color);
+background: var(--screen-content);
+background-position: center;
+background-size: cover;
 /* box-shadow: 
     inset -5px -5px 0px var(--display-color-border),
     inset 5px 5px 0px var(--display-color-border);*/
 height: 100%; 
 width: 10%;
 flex-grow: 2;
-border-radius: var(--keys-radius);
+border-radius: var(--display-radius);
 }
 
 
@@ -509,7 +810,7 @@ section:nth-of-type(2) {
     gap: var(--controller-padding);
     z-index: -999;
     mix-blend-mode:overlay;
-    color:#000000;
+    color: var(--background-color-text);
 }
 
 section:nth-of-type(2) div {
