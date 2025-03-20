@@ -44,9 +44,10 @@ Ik heb nog een dag gekeken hoe ver ik variabele fonts kan animeren
 ## grid area
 Ik heb een layout gemaakt met grid(area) Dit werkt goed en is visueel chill alleen kreeg ik problemen met responsiveness. Ik heb niet eens geprobeerd om het met content te vullen.  
 - voordelen
-    -overzichtelijk
+    - overzichtelijk
 - nadelen
     - Responsiveness issues  
+       
 [layout00](https://codepen.io/stijn_ux/pen/XJWaxbp) oefenen met selectors  
 [layout01](https://codepen.io/stijn_ux/pen/LEYjMxR) grid area clean  
 [layout02](https://codepen.io/stijn_ux/pen/MYWrEKd) grid area  
