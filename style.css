@@ -47,7 +47,6 @@ html {
     --keys-radius:.3rem;
     --keys-radius-edge:0.3rem;
     
-    --keys-white-hover:#d3d3d3;
     --keys-white-width: var(--piano-keys);
     --keys-white-height: 100%;
     --keys-white-border: solid var(--controller-color) 1px;
@@ -701,7 +700,8 @@ section:nth-of-type(1) > div:last-of-type ul li {
 }
 
 section:nth-of-type(1) > div:last-of-type ul li:hover {
-    background-color: var(--keys-white-hover);
+    transform: translateY(.25rem);
+    transition: 150ms linear;
 }
 
 section:nth-of-type(1) > div:last-of-type ul li:last-of-type{

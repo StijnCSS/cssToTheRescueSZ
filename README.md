@@ -1,6 +1,6 @@
 # Control panel - Stijn Zwaard
 ### CSS MIDI PLAYER
-[eindresultaat] (https://stijncss.github.io/cssToTheRescueSZ/)
+[eindresultaat](https://stijncss.github.io/cssToTheRescueSZ/)
 
 ## Concept
 Ik ga een midi player maken gebasseerd op het merk AKAI. Een midi player heeft veel knopjes en verschillende soorten inputs. Joystick, piano keys, drum pads en draai nobs. Ik wil elke week focussen op een ander gebied van de midi player. [foto van mijn concept](https://imgur.com/a/LV6PVqo)
@@ -48,17 +48,32 @@ Ik heb een layout gemaakt met grid(area) Dit werkt goed en is visueel chill alle
 - nadelen
     - Responsiveness issues  
 [layout00](https://codepen.io/stijn_ux/pen/XJWaxbp) oefenen met selectors  
-[layout01](https://codepen.io/stijn_ux/pen/LEYjMxR) grid area clean
+[layout01](https://codepen.io/stijn_ux/pen/LEYjMxR) grid area clean  
 [layout02](https://codepen.io/stijn_ux/pen/MYWrEKd) grid area  
   
+### Workshops week 3
 [workshop-flexbox-pro-Nils-01](https://codepen.io/stijn_ux/pen/OPJxRvE)  
 [workshop-flexbox-pro-Nils-02](https://codepen.io/stijn_ux/pen/pvoWEGM)  
 [eigen-flexbox-experiment](https://codepen.io/stijn_ux/pen/mydBqZO)  
 
-# Pianokeys Calc & Round
+## Pianokeys Calc & Round
 Nils heeft mij geleerd om Round te gebruiken om per octaaf te resizen in plaats van per key. Dit zorgt ervoor dat ik geen lelijke halve toetsen in beeld krijg. Round is niet zo ingewikkeld maar ik heb wel veel moeite gehad om het perfect te krijgen dit kwam door externe factoren zoals box-sizing en padding op de parent.
-## Workshops
+
+### Interacties
+## Joystick
+Met de joystick gebruik ik :has om de achtergrond kleur aan te passen
+## Keys
+De keys hebben voor nu alleen een kleurrijke hover state en kleine animatie 
+De keys moeten 'geluid' maken ik wil een :after toeveogen op elke toets die een animatie heeft van een muziek nootje die in beeld komt boven de toets die je indrukt. 
+## Drumpad
+De drumpad gebruikt :has om de variabelen aan te passen die de kleur en radius aanpassen van de controller
+## Kabel
+De kabel heb ik met de JS gelinked aan de S van HSL. Dit moet aan ene uit symbolizeren. Geen kleur is uit en kleur is aan. De kabel blijft kleurrijk om de gebruiker een hint te geven dat je daar moet beginnen
+### Reflectie
+Ik ben erg blij met mijn eindresultaat ik heb heel veel nieuwe CSS truckjes gebruikt. Geen classes gebruiken is goed te doen alleen niet heel overzichtelijk.  
+Ik ben het meest trots op de responsiveness, dat het per octaaf scaled is een klein detail dat het voor mij compleet maakt.  Ik heb ook geleerd dat ik mijn eerste concept te complex heb gemaakt waardoor ik een heel ander eindproduct heb dan ik eerst in gedacht had. Mijn eindproduct is een stuk simpeler met minder controls, ik ben wel tevreden met deze versie. Bij mijn volgende project wil ik eerst wat simpeler beginnen en het dan uitbreiden in plaats vna complex beginnen en dan het simpeler moeten maken omdat het te complex is.
 
 ### Bronnen
  [Calc codepen Nils](https://codepen.io/enbee81/pen/zxYEwKZ?editors=1100)  
  [Joystick Chris](https://codepen.io/Christian199815/pen/YPzZpeq?editors=1100)  
+ [only JS allowed](https://codepen.io/shooft/pen/LYaexbj)
