@@ -6,9 +6,9 @@
 
 html {
     --background-color:hsl(204, var(--gradient-percent), 50%);
-    --background-color-text:#878787;
+    --background-color-text:#040404;
     --screen-content:url(./images/stijn01.gif);
-    --cable-color:hsl(0, var(--gradient-percent), 48%);
+    --cable-color:hsl(0, 90%, 48%);
     --gradient-percent: 50%;
 
     --controller-width: round(down, 90vw, calc( (var(--piano-width) ) ) );
@@ -28,6 +28,7 @@ html {
     --joystick-color: hsl(0, var(--gradient-percent), 48%);
     --joystick-color-background:hsl(0, var(--gradient-percent), 17%);
     --joystick-radius: 50%;
+    --joystick-background-radius:1rem;
     --joystick-width: 4rem;
     --joystick-height: var(--joystick-width);
     
@@ -35,8 +36,8 @@ html {
     --drumpad-width: calc( var(--drumpad-width) + 1rem );
     --drumpad-radius:1rem;
     --drumpad-hover:var(--cable-color);
-    --drumpad-color:#dd1111;
-    --drumpad-color-active:#a20707;
+    --drumpad-color:hsl(0, var(--gradient-percent), 47%);
+    --drumpad-color-active:hsl(0, var(--gradient-percent), 33%);
     
     --display-color:#606c38;
     --display-color-highlight: #283618;
@@ -59,6 +60,7 @@ html {
     --keys-black-color:var(--controller-color);
     --keys-black-height:50%;
     
+    /* ChatGPT gebruikt voor kleuren genereren met persoonlijke tweaks */
     --color-note-c: hsl(0, var(--gradient-percent), 65%);      /* Vibrant Red */
     --color-note-c-sharp: hsl(23, var(--gradient-percent), 65%); /* Vibrant Orange */
     --color-note-d: hsl(51, var(--gradient-percent), 50%);      /* Vibrant Gold */
@@ -72,7 +74,6 @@ html {
     --color-note-a-sharp: hsl(322,var(--gradient-percent), 47%); /* Vibrant Violet */
     --color-note-b: hsl(328, var(--gradient-percent), 54%);      /* Vibrant Pink */
 }
-
 
 /* 2e knop */
 html:has(input#tom:checked) {
@@ -90,6 +91,7 @@ html:has(input#tom:checked) {
     
     --joystick-color: #FF7A00;
     --joystick-color-background:#001f36;
+    --joystick-background-radius:0;
     
     --color-note-c: #FF7A00;      /* Warm Orange */
     --color-note-c-sharp: #C4400B; /* Deep Reddish-Orange */
@@ -117,8 +119,9 @@ html:has(input#kim:checked) {
     --drumpad-radius: 3rem 2rem 1rem 3rem;
     --drumpad-color: #78C850;           /* Lush Grass Green */
     --drumpad-color-active: #94EA31;    /* Electric Leaf Green */
-    --keys-radius: 1rem 5rem 1rem 1rem;
+    --keys-radius: 0rem 0rem 4rem 4rem;
     --display-radius: 1rem 5rem 1rem 1rem;
+    
     --joystick-color: #FFB5D7;          /* Sky Blue */
     --joystick-color-background: #4E7BAA; /* Soft Marine Blue */
 
@@ -280,7 +283,8 @@ html:has(input#jana:checked) {
     
     --joystick-color: #ffd700;        /* Light Blue */
     --joystick-color-background: #5A3A76; /* Muted Violet */
-
+    --joystick-background-radius:4rem 1rem 1rem 1rem;
+    
     --color-note-c: #9D4EDD;          /* Vibrant Purple */
     --color-note-c-sharp: #6E308F;    /* Royal Indigo */
     --color-note-d: #AFA2F9;          /* Soft Lavender Blue */
@@ -357,7 +361,6 @@ html:has(input#sunset:checked) {
 }
 
 /* 11e */
-
 html:has(input#mint:checked) {
     --screen-content: url(./images/tom.gif);
     --cable-color: #64F5D3; /* Fresh Mint */
@@ -421,7 +424,6 @@ html:has(input#rainbow:checked) {
     padding: 0;
     margin: 0;
 }
-
 ul{
     list-style: none;
 }
@@ -433,22 +435,21 @@ body{
     height: 100vh;
     background-color:var(--background-color);
     overflow: hidden;
-    
 }
 
-
-/* bovenkant */ /* bovenkant */ /* bovenkant */
+/* controller */ /* controller */ /* controller */
 
 section:nth-of-type(1) {
     background-color: var(--controller-color);
     width: fit-content;
     padding: var(--controller-padding);
     border-radius:var(--piano-radius);
+    z-index: 2;
 }
 
 
 /* kabel */ /* kabel */ /* kabel */ /* kabel */
-/* opzoeken wat webkit precies doet */
+
 input[type=range]{
     appearance: none;
     background: transparent;
@@ -458,7 +459,8 @@ input[type=range]{
     height: calc(50vh - 7.5rem);
     width: 1rem;
     writing-mode: vertical-lr;
-    /* z-index: -1; */
+    /* -1 index stopt de interactie */
+    z-index: 1;
 }
 
 input[type=range]::-webkit-slider-runnable-track {
@@ -477,7 +479,6 @@ input[type=range]::-webkit-slider-thumb {
     box-shadow: 0 10px 0 gray;
     cursor: pointer;
     transform: translateX(-.5rem);
-    /* margin-top: -14px; You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
 }
 
 input[type=range]::-ms-track {
@@ -493,6 +494,7 @@ input[type=range]::-ms-track {
   
 /* joystick */ /* joystick */ /* joystick */
 
+
   section:nth-of-type(1) > div:first-of-type{
     display: flex;
     gap: var(--controller-gap);
@@ -500,7 +502,7 @@ input[type=range]::-ms-track {
     padding-bottom: var(--controller-padding);
 }
 
-
+/* joystick grid */
 section:nth-of-type(1) > div:first-of-type ul:nth-of-type(1){
     display: grid;
     grid-template-columns: repeat(3, 33%);
@@ -510,11 +512,12 @@ section:nth-of-type(1) > div:first-of-type ul:nth-of-type(1){
     width: var(--joystick-width);
     
     background-color: var(--joystick-color-background);
-    border-radius: var(--joystick-radius);
+    border-radius: var(--joystick-background-radius);
     flex-shrink:0;
     
 }
 
+/* middelste vak is de joystick */
 section:nth-of-type(1) > div:first-of-type ul:nth-of-type(1) li:nth-child(5) {
     pointer-events:none;
     background-color: var(--joystick-color);
@@ -558,6 +561,7 @@ body:has(section:nth-of-type(1) > div:first-of-type ul:nth-of-type(1) li:nth-chi
     transition: background-color 0.3s ease-in-out; 
 }
  
+ /* ik wilde testen of dit ook werkt en het doet het. ik vind transition met hover overzichtelijker dan 9 verschillende keyframes te maken*/
 body:has(section:nth-of-type(1) > div:first-of-type ul:nth-of-type(1) li:nth-child(9):hover) {
 animation: background09 350ms linear forwards;
 }
@@ -613,6 +617,7 @@ section:nth-of-type(1)  ul:nth-of-type(2) li {
         background-color: var(--drumpad-hover);
         outline: 0px solid var(--color-note-b);
         animation: --border 500ms ease-out infinite alternate;
+        
     }
 }
 
@@ -703,10 +708,6 @@ section:nth-of-type(1) > div:last-of-type ul li:hover {
     background-color: var(--keys-white-hover);
 }
 
-section:nth-of-type(1) > div:last-of-type ul li:first-of-type{
-    border-top-left-radius: var(--keys-radius-edge);
-    border-bottom-left-radius: var(--keys-radius-edge);
-}
 section:nth-of-type(1) > div:last-of-type ul li:last-of-type{
     border-top-right-radius: var(--keys-radius-edge);
     border-bottom-right-radius: var(--keys-radius-edge);
@@ -787,22 +788,18 @@ section:nth-of-type(1) > div:last-of-type ul li:nth-child(12n + 11):hover {
     background-color: var(--color-note-a-sharp);
 }
 
-
-section:nth-of-type(1) > div:last-of-type ul li:nth-child(12n + 12) {
-    border-top-right-radius: var(--keys-radius-edge);
-    border-bottom-right-radius: var(--keys-radius-edge);
-}
-
 section:nth-of-type(1) > div:last-of-type ul li:nth-child(12n + 12):hover {
     background-color: var(--color-note-b);
 
 }
+
 
 /* typography */ /* typography */ /* typography */
 
 section:nth-of-type(2) {
     position: absolute;
     display: grid;
+    align-items: center;
     width: 100vw;
     height: 100vh;
     grid-template-columns: repeat(4, 1fr);
@@ -814,18 +811,16 @@ section:nth-of-type(2) {
 }
 
 section:nth-of-type(2) div {
-    animation: weight-animation 5s linear infinite alternate;
     transform-origin:center;
-    &::after {
+
+    &:after {
         animation: weight-animation 5s linear infinite alternate;
         content: 'party';
-        font-size: 24cqw; 
+        font-size: 34cqw; 
         font-family: 'Tiny5';
         font-variation-settings: 'wght' 50;
-        
     }
 }
-
 @keyframes weight-animation {
     from {
         font-variation-settings: 'wght' 50;
@@ -837,24 +832,18 @@ section:nth-of-type(2) div {
     }
 }
 
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment/Container_queries */
+/* @container (min-width: 700px) {
 
-
-
- @media (width > 650px) {
-    section:nth-of-type(1) > div:last-of-type ul li:nth-child(12n + 12) {
-        border-top-right-radius: var(--keys-radius);
-        border-bottom-right-radius: var(--keys-radius);
-    }
-    
     section:nth-of-type(2) {
         grid-template-columns: repeat(8, 1fr);
         grid-template-rows: repeat(8, 1fr)
     }
     
     section:nth-of-type(2) div:after {
-        font-size: 10cqw;
+        font-size: 22cqw;
     }
-} 
+}  */
 
 @media (width > 653px) {
     
