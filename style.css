@@ -521,51 +521,57 @@ section:nth-of-type(1) > div:first-of-type ul:nth-of-type(1) li:nth-child(5) {
     transform:scale(1.2);
     transition: 0.3s ease-in-out;
 }
-
+/* Joystick area linksboven hover */
 body:has(section:nth-of-type(1) > div:first-of-type ul:nth-of-type(1) li:nth-child(1):hover) {
     background-color: var(--color-note-a);
     transition: background-color 0.3s ease-in-out; 
 }
  
+ /* Joystick area middenboven hover*/
 body:has(section:nth-of-type(1) > div:first-of-type ul:nth-of-type(1) li:nth-child(2):hover) {
     background-color: var(--color-note-b);
     transition: background-color 0.3s ease-in-out; 
 }
  
+ /* Joystick area rechtsboven hover*/
 body:has(section:nth-of-type(1) > div:first-of-type ul:nth-of-type(1) li:nth-child(3):hover) {
     background-color: var(--color-note-c);
     transition: background-color 0.3s ease-in-out; 
 }
- 
+ /* Joystick area middnelinks hover*/
 body:has(section:nth-of-type(1) > div:first-of-type ul:nth-of-type(1) li:nth-child(4):hover) {
     background-color: var(--color-note-d);
     transition: background-color 0.3s ease-in-out; 
 }
- 
+ /* Joystick area middenrechts hover*/
 body:has(section:nth-of-type(1) > div:first-of-type ul:nth-of-type(1) li:nth-child(6):hover) {
     background-color: var(--color-note-e);
     transition: background-color 0.3s ease-in-out; 
 }
- 
+
+/* Joystick area linksonder hover*/
 body:has(section:nth-of-type(1) > div:first-of-type ul:nth-of-type(1) li:nth-child(7):hover) {
     background-color: var(--color-note-f);
     transition: background-color 0.3s ease-in-out; 
 }
- 
+
+/* Joystick area middenonder hover*/
 body:has(section:nth-of-type(1) > div:first-of-type ul:nth-of-type(1) li:nth-child(8):hover) {
     background-color: var(--color-note-g);
     transition: background-color 0.3s ease-in-out; 
 }
  
- /* ik wilde testen of dit ook werkt en het doet het. ik vind transition met hover overzichtelijker dan 9 verschillende keyframes te maken*/
+ /* Joystick area rechtsonder ik wilde testen of dit ook werkt en het doet het. ik vind transition met hover overzichtelijker dan 9 verschillende keyframes te maken*/
 body:has(section:nth-of-type(1) > div:first-of-type ul:nth-of-type(1) li:nth-child(9):hover) {
 animation: background09 350ms linear forwards;
 }
+
 @keyframes background09 {
     to {
         background-color: var(--color-note-a-sharp);
     }
 }
+
 section:nth-of-type(1) > div:first-of-type ul:first-of-type:has(li:nth-child(1):hover) li:nth-child(5) {
     transform: translate(-70%, -70%);
  }
@@ -741,6 +747,7 @@ section:nth-of-type(1) > div:last-of-type ul li:nth-child(12n + 11) {
     border-top-right-radius: 0;
 }
 
+/* Elke key heeft een andere kleur als je erover hovered. elke C heeft dezelfde kleur octaaf = 12 toetsen */
 section:nth-of-type(1) > div:last-of-type ul li:nth-child(12n + 1):hover {
     background-color: var(--color-note-c);
 }
@@ -809,7 +816,7 @@ section:nth-of-type(2) {
 section:nth-of-type(2) div {
     transform-origin:center;
 
-    &:after {
+    &::after {
         animation: weight-animation 5s linear infinite alternate;
         content: 'party';
         font-size: 34cqw; 
@@ -817,6 +824,7 @@ section:nth-of-type(2) div {
         font-variation-settings: 'wght' 50;
     }
 }
+
 @keyframes weight-animation {
     from {
         font-variation-settings: 'wght' 50;
@@ -828,19 +836,9 @@ section:nth-of-type(2) div {
     }
 }
 
-/* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment/Container_queries */
-/* @container (min-width: 700px) {
 
-    section:nth-of-type(2) {
-        grid-template-columns: repeat(8, 1fr);
-        grid-template-rows: repeat(8, 1fr)
-    }
-    
-    section:nth-of-type(2) div:after {
-        font-size: 22cqw;
-    }
-}  */
 
+/* Media queries breiden de drumpads uit naarmate het scherm groter wordt */
 @media (width > 653px) {
     
     section:nth-of-type(1)  ul:nth-of-type(2) li:nth-of-type(3),
