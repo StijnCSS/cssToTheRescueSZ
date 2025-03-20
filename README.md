@@ -22,21 +22,26 @@ Ik wil het er zo realistisch mogelijk uit laten zien door gradients etc te gebru
 
 # Week 2
 ## 3 maart
-Ik ben van plan om elk segment van de MIDI controller los te maken in codepen's voordat ik ze tot één geheel ga samenmaken
-[Joystick](https://codepen.io/stijn_ux/pen/raNyjMN)
-[Drumpad](https://codepen.io/stijn_ux/pen/EaxWGzR)
-[Piano](https://codepen.io/stijn_ux/pen/PwopYqG)
-[gridtestje](https://codepen.io/stijn_ux/pen/PwopmvJ)
+Ik ben van plan om elk segment van de MIDI controller los te maken in codepen's voordat ik ze tot één geheel ga samenmaken  
+[Joystick](https://codepen.io/stijn_ux/pen/raNyjMN)  
+[Drumpad](https://codepen.io/stijn_ux/pen/EaxWGzR)  
+[Piano](https://codepen.io/stijn_ux/pen/PwopYqG)  
+[gridtestje](https://codepen.io/stijn_ux/pen/PwopmvJ)  
 ## 4 maart
 4 maart heb stond echt in het thema van tekst animeren. Ik heb gestoeid met variabele fonts en ngo veel meer!
 animation die ik gemaakt heb tijdens de workshops van Roel [v1](https://codepen.io/stijn_ux/pen/xbxqMOm) [v2](https://codepen.io/stijn_ux/pen/RNwpzBQ) [opdracht] (https://codepen.io/stijn_ux/pen/XJWMOww)
 
-## experiment
-Kennis van pres sanne + en workshop Roel 
-[Final](https://codepen.io/stijn_ux/pen/pvoeXEG)
+## Typografie experiment
+Kennis van pres sanne + en workshop Roel  
+[workshop_Roel] (https://codepen.io/stijn_ux/pen/RNwpzBQ)  
 
-### Gefaalde experimenten
-[v1](https://codepen.io/stijn_ux/pen/MYWpdyQ)
-[v2](https://codepen.io/stijn_ux/pen/mydWYzr)
+Ik heb nog een dag gekeken hoe ver ik variabele fonts kan animeren  
 
-# Week 3
+[Text_animatie] (https://codepen.io/stijn_ux/pen/xbxqMOm)  
+**[Final](https://codepen.io/stijn_ux/pen/pvoeXEG)**  
+
+### Gefaalde typografie experimenten
+[rainbow text](https://codepen.io/stijn_ux/pen/MYWpdyQ)  
+[retro bounce](https://codepen.io/stijn_ux/pen/mydWYzr)  
+
+# Layout experimenten
