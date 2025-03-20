@@ -82,7 +82,7 @@ Calc & Round `--controller-width: round(down, 90vw, calc( (var(--piano-width) ) 
 Display Grid `  display: grid; grid-area fractions`  
 Complexe Flexbox begrippen `flex basis Flex-grow & flex-shrink`  
 CSS Nesting `&:hover`  
-Meest verwarrende selector ` section:nth-of-type(1) > div:first-of-type ul:first-of-type:has (li:nth-child(6):hover) li:nth-child(5)`  
+🤯 Meest verwarrende selector AWARD ` section:nth-of-type(1) > div:first-of-type ul:first-of-type:has (li:nth-child(6):hover) li:nth-child(5)`  
 animatie origin `transform-origin:center;`  
 psuedo elementen `;:before ::after`  
 @media queries `@media (width > 653px)`  
