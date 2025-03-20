@@ -50,6 +50,7 @@ Ik heb een layout gemaakt met grid(area) Dit werkt goed en is visueel chill alle
 [layout00](https://codepen.io/stijn_ux/pen/XJWaxbp) oefenen met selectors  
 [layout01](https://codepen.io/stijn_ux/pen/LEYjMxR) grid area clean  
 [layout02](https://codepen.io/stijn_ux/pen/MYWrEKd) grid area  
+[container queries](https://codepen.io/stijn_ux/pen/YPzxOZQ)  
   
 ### Workshops week 3
 [workshop-flexbox-pro-Nils-01](https://codepen.io/stijn_ux/pen/OPJxRvE)  
@@ -70,10 +71,31 @@ De drumpad gebruikt :has om de variabelen aan te passen die de kleur en radius a
 ## Kabel
 De kabel heb ik met de JS gelinked aan de S van HSL. Dit moet aan ene uit symbolizeren. Geen kleur is uit en kleur is aan. De kabel blijft kleurrijk om de gebruiker een hint te geven dat je daar moet beginnen
 ### Reflectie
+
+## Nieuwe code
+Werken met veel Variabelen `--cable-color:#e90c0c;  --gradient-percent: 50%;`  
+variabele fonts property's `font-variation-settings: 'wght' 50;`  
+Calc & Round `--controller-width: round(down, 90vw, calc( (var(--piano-width) ) ) )`  
+:Has `html:has(input#tom:checked)`  
+Display Grid `  display: grid; grid-area fractions`  
+Complexe Flexbox begrippen `flex basis Flex-grow & flex-shrink`  
+CSS Nesting `&:hover`  
+Meest verwarrende selector ` section:nth-of-type(1) > div:first-of-type ul:first-of-type:has (li:nth-child(6):hover) li:nth-child(5)`  
+animatie origin `transform-origin:center;`  
+psuedo elementen `;:before ::after`  
+@media queries `@media (width > 653px)`  
+pointer events `pointer-events:none;`  
+
+## Conclusie
 Ik ben erg blij met mijn eindresultaat ik heb heel veel nieuwe CSS truckjes gebruikt. Geen classes gebruiken is goed te doen alleen niet heel overzichtelijk.  
 Ik ben het meest trots op de responsiveness, dat het per octaaf scaled is een klein detail dat het voor mij compleet maakt.  Ik heb ook geleerd dat ik mijn eerste concept te complex heb gemaakt waardoor ik een heel ander eindproduct heb dan ik eerst in gedacht had. Mijn eindproduct is een stuk simpeler met minder controls, ik ben wel tevreden met deze versie. Bij mijn volgende project wil ik eerst wat simpeler beginnen en het dan uitbreiden in plaats vna complex beginnen en dan het simpeler moeten maken omdat het te complex is.
 
+### Dingen die Sanne zei dat beter waren maar ik zei dat ik ze niet ging aanpassen maar toch heb aangepast
+background > background-color 
+desktop beginnen en min + max width gebruiken > mobile first alleen width > gebruiken  
 ### Bronnen
+[Css Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)  
  [Calc codepen Nils](https://codepen.io/enbee81/pen/zxYEwKZ?editors=1100)  
  [Joystick Chris](https://codepen.io/Christian199815/pen/YPzZpeq?editors=1100)  
  [only JS allowed](https://codepen.io/shooft/pen/LYaexbj)
+ CHATgpt voor debugging en kleuren styles aanmaken

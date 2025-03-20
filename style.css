@@ -8,7 +8,7 @@ html {
     --background-color:hsl(204, var(--gradient-percent), 50%);
     --background-color-text:#040404;
     --screen-content:url(./images/stijn01.gif);
-    --cable-color:hsl(0, 90%, 48%);
+    --cable-color:#e90c0c;
     --gradient-percent: 50%;
 
     --controller-width: round(down, 90vw, calc( (var(--piano-width) ) ) );
