@@ -1,7 +1,7 @@
 # Control panel - Stijn Zwaard
 ### CSS MIDI PLAYER
 [eindresultaat](https://stijncss.github.io/cssToTheRescueSZ/)
-[eindresultaat_photo](./images/keyboard.png)
+[eindresultaat_photo](/images/keyboard.png)
 ## Concept
 Ik ga een midi player maken gebasseerd op het merk AKAI. Een midi player heeft veel knopjes en verschillende soorten inputs. Joystick, piano keys, drum pads en draai nobs. Ik wil elke week focussen op een ander gebied van de midi player. [foto van mijn concept](https://imgur.com/a/LV6PVqo)
 
