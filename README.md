@@ -1,5 +1,6 @@
 # Control panel - Stijn Zwaard
 ### CSS MIDI PLAYER
+[eindresultaat] (https://stijncss.github.io/cssToTheRescueSZ/)
 
 ## Concept
 Ik ga een midi player maken gebasseerd op het merk AKAI. Een midi player heeft veel knopjes en verschillende soorten inputs. Joystick, piano keys, drum pads en draai nobs. Ik wil elke week focussen op een ander gebied van de midi player.
@@ -53,7 +54,18 @@ Ik heb een layout gemaakt met grid(area) Dit werkt goed en is visueel chill alle
 - voordelen
     -overzichtelijk
 - nadelen
-    - Responsiveness issues
-[layout01] (https://codepen.io/stijn_ux/pen/MYWrEKd)
+    - Responsiveness issues  
+[layout00] (https://codepen.io/stijn_ux/pen/XJWaxbp)  
+[layout01] (https://codepen.io/stijn_ux/pen/MYWrEKd)  
+[layout02] (https://codepen.io/stijn_ux/pen/LEYjMxR)  
+[workshop-flexbox-pro-Nils-01](https://codepen.io/stijn_ux/pen/OPJxRvE)  
+[workshop-flexbox-pro-Nils-02](https://codepen.io/stijn_ux/pen/pvoWEGM)  
+[eigen-flexbox-experiment](https://codepen.io/stijn_ux/pen/mydBqZO)  
 
-## Calc & Round
+# Pianokeys Calc & Round
+Nils heeft mij geleerd om Round te gebruiken om per octaaf te resizen in plaats van per key. Dit zorgt ervoor dat ik geen lelijke halve toetsen in beeld krijg. Round is niet zo ingewikkeld maar ik heb wel veel moeite gehad om het perfect te krijgen dit kwam door externe factoren zoals box-sizing en padding op de parent.
+## Workshops
+
+### Bronnen
+ [Calc codepen Nils](https://codepen.io/enbee81/pen/zxYEwKZ?editors=1100)  
+ [Joystick Chris](https://codepen.io/Christian199815/pen/YPzZpeq?editors=1100)  

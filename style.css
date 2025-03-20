@@ -39,9 +39,6 @@ html {
     --drumpad-color:hsl(0, var(--gradient-percent), 47%);
     --drumpad-color-active:hsl(0, var(--gradient-percent), 33%);
     
-    --display-color:#606c38;
-    --display-color-highlight: #283618;
-    --display-color-border:#1b2410;
     --display-radius: 1rem;
     
     --border-width: 1px;
@@ -646,6 +643,8 @@ section:nth-of-type(1) ul:nth-of-type(2) li input[type="radio"]:checked + label 
     to{
         outline: 5px solid var(--color-note-c);}
     }
+
+
 /* default state 2 drumpads zichtbaar */
 
 section:nth-of-type(1)  ul:nth-of-type(2) li:nth-of-type(1),
@@ -660,9 +659,6 @@ section:nth-of-type(1) > div:first-of-type > div {
 background: var(--screen-content);
 background-position: center;
 background-size: cover;
-/* box-shadow: 
-    inset -5px -5px 0px var(--display-color-border),
-    inset 5px 5px 0px var(--display-color-border);*/
 height: 100%; 
 width: 10%;
 flex-grow: 2;
