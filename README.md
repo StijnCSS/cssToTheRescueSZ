@@ -62,16 +62,18 @@ Nils heeft mij geleerd om Round te gebruiken om per octaaf te resizen in plaats 
 
 ### Interacties
 ## Joystick
-Met de joystick gebruik ik :has om de achtergrond kleur aan te passen
+Met de joystick gebruik ik :has om de achtergrond kleur aan te passen en een andere complexe has seelector om een transform op de 5e li item te gebruiken
+
+Ik gebruik een tran
 ## Keys
 De keys hebben voor nu alleen een kleurrijke hover state en kleine animatie 
 De keys moeten 'geluid' maken ik wil een :after toeveogen op elke toets die een animatie heeft van een muziek nootje die in beeld komt boven de toets die je indrukt. 
 ## Drumpad
-De drumpad gebruikt :has om de variabelen aan te passen die de kleur en radius aanpassen van de controller
+De drumpad gebruikt :has om de variabelen aan te passen die de kleur en radius aanpassen van de controller `html:has(input#tom:checked)`
 ## Kabel
 De kabel heb ik met de JS gelinked aan de S van HSL. Dit moet aan ene uit symbolizeren. Geen kleur is uit en kleur is aan. De kabel blijft kleurrijk om de gebruiker een hint te geven dat je daar moet beginnen
-### Reflectie
 
+# Reflectie
 ## Nieuwe code
 Werken met veel Variabelen `--cable-color:#e90c0c;  --gradient-percent: 50%;`  
 variabele fonts property's `font-variation-settings: 'wght' 50;`  
@@ -91,6 +93,7 @@ Ik ben erg blij met mijn eindresultaat ik heb heel veel nieuwe CSS truckjes gebr
 Ik ben het meest trots op de responsiveness, dat het per octaaf scaled is een klein detail dat het voor mij compleet maakt.  Ik heb ook geleerd dat ik mijn eerste concept te complex heb gemaakt waardoor ik een heel ander eindproduct heb dan ik eerst in gedacht had. Mijn eindproduct is een stuk simpeler met minder controls, ik ben wel tevreden met deze versie. Bij mijn volgende project wil ik eerst wat simpeler beginnen en het dan uitbreiden in plaats vna complex beginnen en dan het simpeler moeten maken omdat het te complex is.
 
 ### Dingen die Sanne zei dat beter waren maar ik zei dat ik ze niet ging aanpassen maar toch heb aangepast
+heel veel divjes > ul + li
 background > background-color 
 desktop beginnen en min + max width gebruiken > mobile first alleen width > gebruiken  
 ### Bronnen
