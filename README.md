@@ -31,9 +31,9 @@ Ik ben van plan om elk segment van de MIDI controller los te maken in codepen's 
 ## 4 maart
 4 maart heb stond echt in het thema van tekst animeren. Ik heb gestoeid met variabele fonts en ngo veel meer!
 animation die ik gemaakt heb tijdens de workshops van Roel  
-[v1](https://codepen.io/stijn_ux/pen/xbxqMOm)  
-[v2](https://codepen.io/stijn_ux/pen/RNwpzBQ)  
-[opdracht] (https://codepen.io/stijn_ux/pen/XJWMOww)
+[Scary_Movie](https://codepen.io/stijn_ux/pen/xbxqMOm)  
+[baby_Driver](https://codepen.io/stijn_ux/pen/RNwpzBQ)  
+[li li li li li li li](https://codepen.io/stijn_ux/pen/XJWMOww)
 
 ## Typografie experiment
 Kennis van pres sanne + en workshop Roel  
