@@ -489,7 +489,7 @@ input[type=range]::-ms-track {
   
   
 /* joystick */ /* joystick */ /* joystick */
-
+/* https://codepen.io/Christian199815/pen/YPzZpeq?editors=1100 Als cheatsheet gebruikt */
 
   section:nth-of-type(1) > div:first-of-type{
     display: flex;
