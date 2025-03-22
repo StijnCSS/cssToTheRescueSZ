@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+background-color: teal;
+min-height: 100vh;
+display: flex; 
+align-items: center; 
+justify-content: center;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    /* width: fit-content;
+    display: flex;
+    height: 8rem;
+    background-color: #333;
+    padding:1rem;
+    
+    border-radius: 1.5rem; */
+}
+
+.white {
+width: 100px;
+height: 400px;
+background-color: white;
+border: 1px solid black;
+border-radius: .5rem;
+}
+
+.black {
+width: 1.5rem;
+margin-left: .75rem;
+margin-right: .75rem;
+height: 4rem;
+background-color: red;
+}

@@ -13,13 +13,12 @@ html {
 
     --controller-width: round(down, 90vw, calc( (var(--piano-width) ) ) );
     --controller-height: 12em;
-    --controller-height-top:4rem;
+    --controller-height-top:8rem;
     --controller-height-bottom:8rem;
     --controller-border-radius: 0.5rem;
     --controller-padding:1rem;
     --controller-gap:1rem;
-    --controller-color:#222222;
-   
+    --controller-color:#222222;9 
     
     --piano-keys: 2.5rem;
     --piano-width: calc( (var(--piano-keys) + var(--border-width-2))*  7);
@@ -359,32 +358,32 @@ html:has(input#sunset:checked) {
 /* 11e */
 html:has(input#mint:checked) {
     --screen-content: url(./images/tom.gif);
-    --cable-color: #64F5D3; /* Fresh Mint */
-    --background-color: hsl(160, 80%, 45%); /* Minty Green */
-    --controller-color: #2FA57C; /* Darker Mint */
-    --keys-white-color: #E1FFF9; /* Soft Ice */
-    --keys-black-color: #11695E; /* Deep Teal */
+    --cable-color: #f2561d; /* Fresh Mint */
+    --background-color:  #543D52; /* Minty Green */
+    --controller-color: #562656; /* Darker Mint */
+    --keys-white-color: #F8DF80; /* Soft Ice */
+    --keys-black-color: #E09000; /* Deep Teal */
     --piano-radius: 0.75rem;
     --drumpad-radius: 0.5rem;
-    --drumpad-color: #45D09E; /* Light Mint */
-    --drumpad-color-active: #99FFE0; /* Pale Mint */
+    --drumpad-color: #B90000; /* Light Mint */
+    --drumpad-color-active: #ffb52b; /* Pale Mint */
     --keys-radius: 0.5rem;
 
-    --joystick-color: #64F5D3; /* Fresh Mint */
+    --joystick-color: #b719e8; /* Fresh Mint */
     --joystick-color-background: #145E50; /* Dark Forest */
 
-    --color-note-c: #45D09E; 
-    --color-note-c-sharp: #64F5D3; 
-    --color-note-d: #2FA57C; 
-    --color-note-d-sharp: #99FFE0; 
-    --color-note-e: #4AAE9B; 
-    --color-note-f: #3B8E74; 
-    --color-note-f-sharp: #64F5D3; 
-    --color-note-g: #2FA57C; 
-    --color-note-g-sharp: #99FFE0; 
-    --color-note-a: #3B8E74; 
-    --color-note-a-sharp: #11695E; 
-    --color-note-b: #E1FFF9; 
+    --color-note-c: #D43232;      /* Deep Pepperoni Red */
+    --color-note-c-sharp: #FFB347; /* Cheesy Yellow */
+    --color-note-d: #7E4D82;      /* Brick Purple */
+    --color-note-d-sharp: #C87A9D; /* Soft Magenta */
+    --color-note-e: #4E2647;      /* Dark Plum */
+    --color-note-f: #FAE088;      /* Pale Cheese Yellow */
+    --color-note-f-sharp: #A44A3F; /* Pizza Crust Brown */
+    --color-note-g: #8B3E59;      /* Rich Mauve */
+    --color-note-g-sharp: #6E2E3F; /* Deep Burgundy */
+    --color-note-a: #5A184E;      /* Dark Grape */
+    --color-note-a-sharp: #FFE074; /* Light Pizza Cheese */
+    --color-note-b: #472A52;      /* Shadow Purple */
 }
 /* 12e */
 html:has(input#rainbow:checked) {
