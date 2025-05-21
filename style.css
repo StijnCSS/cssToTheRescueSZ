@@ -18,7 +18,7 @@ html {
     --controller-border-radius: 0.5rem;
     --controller-padding:1rem;
     --controller-gap:1rem;
-    --controller-color:#222222;9 
+    --controller-color:#222222;
     
     --piano-keys: 2.5rem;
     --piano-width: calc( (var(--piano-keys) + var(--border-width-2))*  7);
