@@ -839,7 +839,7 @@ section:nth-of-type(2) div {
 
 
 /* Media queries breiden de drumpads uit naarmate het scherm groter wordt */
-@media (width > 653px) {
+@media (width > 400x) {
     
     section:nth-of-type(1)  ul:nth-of-type(2) li:nth-of-type(3),
     section:nth-of-type(1)  ul:nth-of-type(2) li:nth-of-type(4), 
@@ -858,7 +858,7 @@ section:nth-of-type(2) div {
 }
 
 
-@media (width > 979px) {
+@media (width > 1000px) {
     
     section:nth-of-type(1)  ul:nth-of-type(2) li:nth-of-type(6),
     section:nth-of-type(1)  ul:nth-of-type(2) li:nth-of-type(7), 
@@ -869,7 +869,7 @@ section:nth-of-type(2) div {
 }
 
 
-@media (width > 1306px) {
+@media (width > 1400px) {
     
     section:nth-of-type(1)  ul:nth-of-type(2) li:nth-of-type(10),
     section:nth-of-type(1)  ul:nth-of-type(2) li:nth-of-type(11), 
@@ -878,7 +878,7 @@ section:nth-of-type(2) div {
     }
 }
 
-@media (width > 1634px) {
+@media (width > 1600px) {
     
     section:nth-of-type(1)  ul:nth-of-type(2) li:nth-of-type(14),
     section:nth-of-type(1)  ul:nth-of-type(2) li:nth-of-type(15), 
@@ -887,7 +887,7 @@ section:nth-of-type(2) div {
     }
 }
 
-@media (width > 1632px) {    
+@media (width > 2000px) {    
     section:nth-of-type(1)  ul:nth-of-type(2) li:nth-of-type(14), 
     section:nth-of-type(1)  ul:nth-of-type(2) li:nth-of-type(15),
     section:nth-of-type(1)  ul:nth-of-type(2) li:nth-of-type(16),    
